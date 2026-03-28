@@ -1,0 +1,12 @@
+services:
+  website-rn:
+    image: ghcr.io/reynario/website-rn:latest
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.website-rn.rule=Host(`rndigitalmidia.com.br`) || Host(`www.rndigitalmidia.com.br`)"
+      - "traefik.http.routers.website-rn.entrypoints=websecure"
+      - "traefik.http.routers.website-rn.tls.certresolver=letsencrypt"
+      - "traefik.http.services.website-rn.loadbalancer.server.port=80"
