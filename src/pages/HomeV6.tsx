@@ -74,6 +74,13 @@ const flow = [
   },
 ];
 
+const funnelStages = [
+  { label: 'Cliques', value: '2.480', width: '100%' },
+  { label: 'Leads', value: '388', width: '78%' },
+  { label: 'Oportunidades', value: '185', width: '58%' },
+  { label: 'Vendas', value: '27', width: '38%' },
+];
+
 export default function HomeV6() {
   return (
     <div className="min-h-screen bg-[#070a10] text-white selection:bg-brand-primary selection:text-black">
@@ -152,6 +159,23 @@ export default function HomeV6() {
                       </div>
                     </div>
                   ))}
+                </div>
+
+                <div className="mt-7 rounded-2xl border border-white/12 bg-black/35 p-4">
+                  <p className="text-xs uppercase tracking-[0.14em] text-white/58">Funil de conversao</p>
+                  <div className="mt-4 space-y-2.5">
+                    {funnelStages.map((stage) => (
+                      <div key={stage.label} className="rounded-xl border border-white/10 bg-[#0a1018] px-3 py-2">
+                        <div className="mb-1.5 flex items-center justify-between text-[0.7rem] uppercase tracking-[0.12em] text-white/62">
+                          <span>{stage.label}</span>
+                          <span>{stage.value}</span>
+                        </div>
+                        <div className="mx-auto h-2 rounded-full bg-white/10" style={{ width: stage.width }}>
+                          <div className="h-full rounded-full bg-gradient-to-r from-brand-primary via-amber-300 to-brand-secondary" />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </aside>
             </div>
