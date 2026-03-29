@@ -132,15 +132,13 @@ export default function HomeV6() {
                 </div>
               </div>
 
-              <aside className="flex items-center justify-center overflow-hidden rounded-3xl border border-brand-primary/20 bg-[linear-gradient(160deg,rgba(250,95,42,0.14),rgba(8,12,18,0.9)_35%,rgba(8,12,18,0.95)_100%)] p-0">
+              <aside className="overflow-hidden rounded-3xl border border-brand-primary/20 bg-[linear-gradient(160deg,rgba(250,95,42,0.14),rgba(8,12,18,0.9)_35%,rgba(8,12,18,0.95)_100%)]" style={{ minHeight: 0 }}>
                 <img
                   src="/funil-rn.png"
                   alt="Funil de conversao"
-                  width={768}
-                  height={1366}
                   decoding="async"
                   fetchPriority="high"
-                  className="block w-full object-contain lg:h-full lg:w-auto"
+                  className="block h-full w-full object-contain"
                 />
               </aside>
             </div>
