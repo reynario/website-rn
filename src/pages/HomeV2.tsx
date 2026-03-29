@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import './HomeV2.fonts.css';
 import {
   Link
@@ -42,9 +42,9 @@ export default function HomeV2() {
           </Link>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-white/70">
             <a href="#problema" className="hover:text-white transition-colors">Realidade do Mercado</a>
-            <a href="#solucao" className="hover:text-white transition-colors">Solução</a>
+            <a href="#solucao" className="hover:text-white transition-colors">SoluÃ§Ã£o</a>
             <a href="#como-funciona" className="hover:text-white transition-colors">Como Funciona</a>
-            <a href="#entrega" className="hover:text-white transition-colors">O que você recebe</a>
+            <a href="#entrega" className="hover:text-white transition-colors">O que vocÃª recebe</a>
           </div>
           <a
             href="https://wa.me/5575981642126"
@@ -93,7 +93,7 @@ export default function HomeV2() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-12 leading-relaxed"
           >
-            Juntamos tráfego, CRM e automações pra você parar de perder cliente no meio do caminho.
+            Juntamos trÃ¡fego, CRM e automaÃ§Ãµes pra vocÃª parar de perder cliente no meio do caminho.
           </motion.p>
 
           <motion.div
@@ -163,16 +163,16 @@ export default function HomeV2() {
                 Realidade do Mercado
               </div>
               <h2 className="font-display text-4xl md:text-5xl font-bold mb-8 leading-tight">
-                Você investe em anúncio, os leads chegam. E aí?
+                VocÃª investe em anÃºncio, os leads chegam. E aÃ­?
               </h2>
               <p className="text-xl text-white/60 mb-8 leading-relaxed">
-                A maioria some. Não responde, não avança, não vira cliente. E você fica sem saber se o problema é o anúncio, o atendimento ou outra coisa que ninguém está vendo.
+                A maioria some. NÃ£o responde, nÃ£o avanÃ§a, nÃ£o vira cliente. E vocÃª fica sem saber se o problema Ã© o anÃºncio, o atendimento ou outra coisa que ninguÃ©m estÃ¡ vendo.
               </p>
               <ul className="space-y-4">
                 {[
                   "Esse lead veio de qual campanha?",
                   "Quanto me custou essa venda, de verdade?",
-                  "Onde o funil está travando?"
+                  "Onde o funil estÃ¡ travando?"
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-white/80">
                     <div className="w-1.5 h-1.5 rounded-full bg-red-400" />
@@ -182,7 +182,7 @@ export default function HomeV2() {
               </ul>
               <div className="mt-10 p-6 glass border-red-500/20 rounded-2xl">
                 <p className="text-red-400 font-medium">
-                  "Todo mundo culpa o tráfego. Quase sempre é o processo."
+                  "Todo mundo culpa o trÃ¡fego. Quase sempre Ã© o processo."
                 </p>
               </div>
             </motion.div>
@@ -232,7 +232,7 @@ export default function HomeV2() {
         </div>
       </section>
 
-      {/* Section 2: A Solução */}
+      {/* Section 2: A SoluÃ§Ã£o */}
       <section id="solucao" className="py-24 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full -z-10 opacity-20">
           <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-brand-primary blur-[150px] rounded-full" />
@@ -241,10 +241,10 @@ export default function HomeV2() {
         <div className="max-w-7xl mx-auto px-6">
           <motion.div {...fadeIn} className="text-center mb-20">
             <h2 className="font-display text-4xl md:text-6xl font-bold mb-8">
-              A gente não vende só <span className="text-brand-secondary italic">tráfego</span>
+              A gente nÃ£o vende sÃ³ <span className="text-brand-secondary italic">trÃ¡fego</span>
             </h2>
             <p className="text-xl text-white/60 max-w-3xl mx-auto">
-              Você contrata um processo. Anúncio, CRM, automação, acompanhamento. Tudo conectado pra você enxergar o que está acontecendo — e tomar decisão com base em dado, não em chute.
+              VocÃª contrata um processo. AnÃºncio, CRM, automaÃ§Ã£o, acompanhamento. Tudo conectado pra vocÃª enxergar o que estÃ¡ acontecendo â€” e tomar decisÃ£o com base em dado, nÃ£o em chute.
             </p>
           </motion.div>
 
@@ -257,11 +257,11 @@ export default function HomeV2() {
           >
             {[
               { icon: Target, title: "Omnichannel Ads", desc: "Meta, Google, TikTok e LinkedIn Ads integrados." },
-              { icon: LayoutDashboard, title: "CRM Próprio", desc: "Integrado ao WhatsApp para controle total." },
-              { icon: Zap, title: "Automações", desc: "Atendimento e follow up automático 24/7." },
-              { icon: BarChart3, title: "Tracking Real", desc: "Rastreamento real de cada lead até a venda." },
-              { icon: MessageSquare, title: "Filtros Inteligentes", desc: "Qualificação automática antes de chegar no comercial." },
-              { icon: ShieldCheck, title: "Previsibilidade", desc: "Decisões baseadas em dados, não em achismo." }
+              { icon: LayoutDashboard, title: "CRM PrÃ³prio", desc: "Integrado ao WhatsApp para controle total." },
+              { icon: Zap, title: "AutomaÃ§Ãµes", desc: "Atendimento e follow up automÃ¡tico 24/7." },
+              { icon: BarChart3, title: "Tracking Real", desc: "Rastreamento real de cada lead atÃ© a venda." },
+              { icon: MessageSquare, title: "Filtros Inteligentes", desc: "QualificaÃ§Ã£o automÃ¡tica antes de chegar no comercial." },
+              { icon: ShieldCheck, title: "Previsibilidade", desc: "DecisÃµes baseadas em dados, nÃ£o em achismo." }
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -284,19 +284,19 @@ export default function HomeV2() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
             <div className="max-w-2xl">
-              <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">Como funciona na prática</h2>
-              <p className="text-white/60 text-lg">Cinco etapas. Da estrutura até a otimização, sem deixar lead caindo no vazio.</p>
+              <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">Como funciona na prÃ¡tica</h2>
+              <p className="text-white/60 text-lg">Cinco etapas. Da estrutura atÃ© a otimizaÃ§Ã£o, sem deixar lead caindo no vazio.</p>
             </div>
             <div className="text-brand-secondary font-display text-8xl font-black opacity-10 hidden lg:block uppercase">PROCESSO</div>
           </div>
 
           <div className="grid md:grid-cols-5 gap-4">
             {[
-              { step: "01", title: "Estruturação", desc: "Organizamos campanhas, tracking e funil completo." },
-              { step: "02", title: "Geração", desc: "Ativamos campanhas nas plataformas certas." },
-              { step: "03", title: "Qualificação", desc: "Filtros e mensagens inteligentes no CRM." },
-              { step: "04", title: "Acompanhamento", desc: "Monitoramento de cada lead até virar cliente." },
-              { step: "05", title: "Otimização", desc: "Decisões baseadas em dados reais." }
+              { step: "01", title: "EstruturaÃ§Ã£o", desc: "Organizamos campanhas, tracking e funil completo." },
+              { step: "02", title: "GeraÃ§Ã£o", desc: "Ativamos campanhas nas plataformas certas." },
+              { step: "03", title: "QualificaÃ§Ã£o", desc: "Filtros e mensagens inteligentes no CRM." },
+              { step: "04", title: "Acompanhamento", desc: "Monitoramento de cada lead atÃ© virar cliente." },
+              { step: "05", title: "OtimizaÃ§Ã£o", desc: "DecisÃµes baseadas em dados reais." }
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -316,22 +316,22 @@ export default function HomeV2() {
         </div>
       </section>
 
-      {/* Section 4: O que você recebe */}
+      {/* Section 4: O que vocÃª recebe */}
       <section id="entrega" className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">O que você recebe</h2>
-            <p className="text-white/60 text-lg">Não é software. É o processo rodando pra você.</p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">O que vocÃª recebe</h2>
+            <p className="text-white/60 text-lg">NÃ£o Ã© software. Ã‰ o processo rodando pra vocÃª.</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: "Gestão de tráfego completa", desc: "Meta Ads, Google Ads, TikTok e LinkedIn.", icon: MousePointerClick },
-              { title: "CRM Próprio", desc: "Controle total dos leads e histórico de atendimento.", icon: LayoutDashboard },
-              { icon: MessageSquare, title: "Integração WhatsApp", desc: "Histórico de conversas e envio de compra para o meta." },
-              { icon: Zap, title: "Automação de leads", desc: "Follow up semi-automático e qualificação do lead." },
+              { title: "GestÃ£o de trÃ¡fego completa", desc: "Meta Ads, Google Ads, TikTok e LinkedIn.", icon: MousePointerClick },
+              { title: "CRM PrÃ³prio", desc: "Controle total dos leads e histÃ³rico de atendimento.", icon: LayoutDashboard },
+              { icon: MessageSquare, title: "IntegraÃ§Ã£o WhatsApp", desc: "HistÃ³rico de conversas e envio de compra para o meta." },
+              { icon: Zap, title: "AutomaÃ§Ã£o de leads", desc: "Follow up semi-automÃ¡tico e qualificaÃ§Ã£o do lead." },
               { icon: BarChart3, title: "Painel de acompanhamento", desc: "Visual claro de campanhas, leads e ROI." },
-              { icon: Target, title: "Gestão de funil", desc: "Do clique até o fechamento com visão completa.", highlight: true }
+              { icon: Target, title: "GestÃ£o de funil", desc: "Do clique atÃ© o fechamento com visÃ£o completa.", highlight: true }
             ].map((item, i) => (
               <div key={i} className={`p-8 rounded-3xl border ${item.highlight ? 'border-brand-primary bg-brand-primary/5' : 'border-white/5 glass'}`}>
                 <item.icon className={`w-10 h-10 mb-6 ${item.highlight ? 'text-brand-secondary' : 'text-white/40'}`} />
@@ -352,14 +352,14 @@ export default function HomeV2() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div {...fadeIn}>
               <h2 className="font-display text-4xl md:text-5xl font-bold mb-8">
-                A maioria das agências <span className="text-white/40">para no lead.</span>
+                A maioria das agÃªncias <span className="text-white/40">para no lead.</span>
               </h2>
               <div className="text-6xl md:text-7xl font-display font-black gradient-text mb-8">
                 A gente para na venda.
               </div>
               <div className="space-y-6 text-xl text-white/70">
-                <p>Se o lead não virou cliente, a gente olha onde quebrou e ajusta.</p>
-                <p>Se a campanha não está entregando, a gente muda. Não fica esperando o mês fechar.</p>
+                <p>Se o lead nÃ£o virou cliente, a gente olha onde quebrou e ajusta.</p>
+                <p>Se a campanha nÃ£o estÃ¡ entregando, a gente muda. NÃ£o fica esperando o mÃªs fechar.</p>
                 <div className="pt-4 flex items-center gap-3 text-brand-secondary font-bold">
                   <CheckCircle2 className="w-6 h-6" />
                   Tudo conectado.
@@ -382,14 +382,14 @@ export default function HomeV2() {
               </div>
               <div className="absolute -bottom-6 -right-6 glass p-6 rounded-2xl border-brand-secondary/30 shadow-2xl animate-bounce">
                 <div className="text-brand-secondary font-black text-3xl">+42%</div>
-                <div className="text-xs font-bold uppercase tracking-widest text-white/50">Conversão Média</div>
+                <div className="text-xs font-bold uppercase tracking-widest text-white/50">ConversÃ£o MÃ©dia</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 6: Para quem é */}
+      {/* Section 6: Para quem Ã© */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="glass rounded-[3rem] p-12 md:p-20 overflow-hidden relative">
@@ -399,10 +399,10 @@ export default function HomeV2() {
               <h2 className="font-display text-4xl md:text-5xl font-bold mb-12 text-center">Pra quem faz sentido?</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 {[
-                  "Empresas que já investem ou querem investir em tráfego",
-                  "Negócios que dependem de leads para vender",
+                  "Empresas que jÃ¡ investem ou querem investir em trÃ¡fego",
+                  "NegÃ³cios que dependem de leads para vender",
                   "Empresas que querem previsibilidade de crescimento",
-                  "Quem está cansado de investir sem saber o que está acontecendo"
+                  "Quem estÃ¡ cansado de investir sem saber o que estÃ¡ acontecendo"
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-4 p-6 rounded-2xl bg-white/5 border border-white/5">
                     <CheckCircle2 className="w-6 h-6 text-brand-secondary shrink-0 mt-1" />
@@ -423,7 +423,7 @@ export default function HomeV2() {
               Chega de investir no escuro.
             </h2>
             <p className="text-xl text-white/60 mb-12">
-              Você pode saber exatamente de onde vêm suas vendas.
+              VocÃª pode saber exatamente de onde vÃªm suas vendas.
             </p>
             <a
               href="https://wa.me/5575981642126"
@@ -447,7 +447,7 @@ export default function HomeV2() {
           <Link to="/">
             <Logo />
           </Link>
-          <p className="text-white/30 text-sm">© 2026 RN Digital Mídia. Todos os direitos reservados.</p>
+          <p className="text-white/30 text-sm">© 2026. Todos os direitos reservados.</p>
           <div className="flex gap-6 text-white/40 text-sm">
             <a href="/v1/" className="hover:text-white transition-colors">Versao v1</a>
             <Link to="/v3" className="hover:text-white transition-colors">Versao v3</Link>
@@ -461,3 +461,4 @@ export default function HomeV2() {
     </div>
   );
 }
+

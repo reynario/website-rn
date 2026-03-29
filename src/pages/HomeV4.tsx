@@ -62,7 +62,6 @@ export default function HomeV4() {
         <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6">
           <Link to="/v4" className="flex items-center gap-3">
             <Logo />
-            <span className="hidden text-xs uppercase tracking-[0.2em] text-white/65 md:block">RN Digital Midia</span>
           </Link>
 
           <div className="hidden items-center gap-7 text-xs font-semibold uppercase tracking-[0.13em] text-white/70 md:flex">
@@ -266,10 +265,9 @@ export default function HomeV4() {
         <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-7 px-6 text-center md:flex-row md:text-left">
           <Link to="/v4" className="flex items-center gap-3">
             <Logo />
-            <span className="text-xs uppercase tracking-[0.2em] text-white/62">RN Digital Midia</span>
           </Link>
 
-          <p className="text-sm text-white/50">Â© 2026 RN Digital Midia. Todos os direitos reservados.</p>
+          <p className="text-sm text-white/50">© 2026. Todos os direitos reservados.</p>
 
           <div className="flex items-center gap-5 text-xs uppercase tracking-[0.12em] text-white/65">
             <Link to="/privacidade" className="hover:text-brand-secondary transition-colors">Privacidade</Link>

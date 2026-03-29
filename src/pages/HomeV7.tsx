@@ -1,11 +1,11 @@
-import React from 'react';
+﻿import React from 'react';
 import './HomeV7.fonts.css';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import Logo from '../components/Logo';
 
-// ─── palette ──────────────────────────────────────────────────────────────────
+// â”€â”€â”€ palette â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const C = {
   bg:      '#040810',
   surface: 'rgba(6,10,22,0.85)',
@@ -22,7 +22,7 @@ const SYNE  = "'Syne', sans-serif";
 const MONO  = "'JetBrains Mono', monospace";
 const BODY  = "'DM Sans', sans-serif";
 
-// ─── data ─────────────────────────────────────────────────────────────────────
+// â”€â”€â”€ data â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const scoreMetrics = [
   { label: 'Leads no CRM',      value: '210',      pct: 67 },
   { label: 'CAC medio',         value: 'R$350',     pct: 78 },
@@ -58,7 +58,7 @@ const flow = [
   { id: '04', title: 'Qualificacao',  text: 'O lead recebe contato no momento certo, na etapa certa. Sem spam, sem silencio.' },
 ];
 
-// ─── motion helpers ───────────────────────────────────────────────────────────
+// â”€â”€â”€ motion helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 22 },
   whileInView: { opacity: 1, y: 0 },
@@ -66,12 +66,12 @@ const fadeUp = (delay = 0) => ({
   transition: { duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] },
 });
 
-// ─── sub-components ───────────────────────────────────────────────────────────
+// â”€â”€â”€ sub-components â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function SectionLabel({ num, label }: { num: string; label: string }) {
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '32px' }}>
       <span style={{ fontFamily: MONO, fontSize: '10px', color: C.lime, letterSpacing: '0.18em', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
-        {num} · {label}
+        {num} Â· {label}
       </span>
       <div style={{ flex: 1, height: '1px', background: C.border }} />
     </div>
@@ -98,12 +98,12 @@ function Tag({ children }: { children: React.ReactNode }) {
   );
 }
 
-// ─── component ────────────────────────────────────────────────────────────────
+// â”€â”€â”€ component â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export default function HomeV7() {
   return (
     <div style={{ minHeight: '100vh', background: C.bg, color: C.text, fontFamily: BODY }}>
 
-      {/* ── atmosphere ── */}
+      {/* â”€â”€ atmosphere â”€â”€ */}
       <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden" aria-hidden="true">
         <div style={{
           position: 'absolute', top: '-25%', left: '-15%', width: '65%', height: '65%',
@@ -122,7 +122,7 @@ export default function HomeV7() {
 
       <div className="relative z-10">
 
-        {/* ════════════════════════════════════════ NAV ═══════════════════════════════════════════ */}
+        {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• NAV â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
         <nav style={{
           borderBottom: `1px solid ${C.border}`,
           background: 'rgba(4,8,16,0.88)',
@@ -133,9 +133,6 @@ export default function HomeV7() {
 
             <Link to="/v7" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
               <Logo />
-              <span style={{ fontFamily: MONO, fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', color: C.muted }}>
-                Digital Midia
-              </span>
             </Link>
 
             <div className="hidden md:flex items-center" style={{ gap: '36px' }}>
@@ -168,7 +165,7 @@ export default function HomeV7() {
           </div>
         </nav>
 
-        {/* ════════════════════════════════════════ HERO ══════════════════════════════════════════ */}
+        {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• HERO â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
         <section style={{ padding: '72px 24px 80px' }}>
           <div className="mx-auto w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 
@@ -343,7 +340,7 @@ export default function HomeV7() {
           </div>
         </section>
 
-        {/* ══════════════════════════════════════ 01 PROBLEMA ═════════════════════════════════════ */}
+        {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• 01 PROBLEMA â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
         <section id="problema" style={{ padding: '72px 24px', background: 'rgba(4,7,18,0.6)' }}>
           <div className="mx-auto w-full max-w-7xl">
             <motion.div {...fadeUp(0)}>
@@ -386,7 +383,7 @@ export default function HomeV7() {
           </div>
         </section>
 
-        {/* ══════════════════════════════════════ 02 SOLUCAO ══════════════════════════════════════ */}
+        {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• 02 SOLUCAO â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
         <section id="solucao" style={{ padding: '72px 24px' }}>
           <div className="mx-auto w-full max-w-7xl">
             <motion.div {...fadeUp(0)}>
@@ -432,7 +429,7 @@ export default function HomeV7() {
           </div>
         </section>
 
-        {/* ═════════════════════════════════════ 03 COMO FUNCIONA ══════════════════════════════════ */}
+        {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• 03 COMO FUNCIONA â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
         <section id="como-funciona" style={{ padding: '72px 24px 88px', background: 'rgba(4,7,18,0.6)' }}>
           <div className="mx-auto w-full max-w-7xl">
             <motion.div {...fadeUp(0)}>
@@ -519,18 +516,15 @@ export default function HomeV7() {
           </div>
         </section>
 
-        {/* ════════════════════════════════════════ FOOTER ════════════════════════════════════════ */}
+        {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• FOOTER â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
         <footer style={{ borderTop: `1px solid ${C.border}`, background: 'rgba(4,8,16,0.92)', padding: '36px 24px' }}>
           <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-5 md:flex-row">
             <Link to="/v7" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
               <Logo />
-              <span style={{ fontFamily: MONO, fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', color: C.muted }}>
-                Digital Midia
-              </span>
             </Link>
 
             <p style={{ fontFamily: MONO, fontSize: '10px', color: C.muted, letterSpacing: '0.08em' }}>
-              © 2026 RN Digital Midia. Todos os direitos reservados.
+              © 2026. Todos os direitos reservados.
             </p>
             <div style={{ display: 'flex', gap: '22px', fontFamily: MONO, fontSize: '9px', letterSpacing: '0.14em', textTransform: 'uppercase' }}>
               <Link to="/privacidade" style={{ color: C.muted, textDecoration: 'none', transition: 'color .2s' }}>Privacidade</Link>
@@ -543,3 +537,4 @@ export default function HomeV7() {
     </div>
   );
 }
+

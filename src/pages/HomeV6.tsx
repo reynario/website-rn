@@ -88,7 +88,6 @@ export default function HomeV6() {
           <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-5">
             <Link to="/v6" className="inline-flex items-center gap-3">
               <Logo />
-              <span className="text-xs uppercase tracking-[0.2em] text-white/70">RN Digital Midia</span>
             </Link>
 
             <a
@@ -133,15 +132,15 @@ export default function HomeV6() {
                 </div>
               </div>
 
-              <aside className="rounded-3xl border border-brand-primary/20 bg-[linear-gradient(160deg,rgba(250,95,42,0.14),rgba(8,12,18,0.9)_35%,rgba(8,12,18,0.95)_100%)] p-4 md:p-6">
+              <aside className="flex items-center justify-center overflow-hidden rounded-3xl border border-brand-primary/20 bg-[linear-gradient(160deg,rgba(250,95,42,0.14),rgba(8,12,18,0.9)_35%,rgba(8,12,18,0.95)_100%)] p-0">
                 <img
                   src="/funil-rn.png"
-                  alt="Funil de conversao RN Digital Midia"
+                  alt="Funil de conversao"
                   width={768}
                   height={1366}
                   decoding="async"
                   fetchPriority="high"
-                  className="mx-auto w-full max-w-[430px] object-contain"
+                  className="block w-full object-contain lg:h-full lg:w-auto"
                 />
               </aside>
             </div>
@@ -229,10 +228,9 @@ export default function HomeV6() {
           <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-6 px-6 text-center md:flex-row md:text-left">
             <Link to="/v6" className="flex items-center gap-3">
               <Logo />
-              <span className="text-xs uppercase tracking-[0.2em] text-white/60">RN Digital Midia</span>
             </Link>
 
-            <p className="text-sm text-white/55">© 2026 RN Digital Midia. Todos os direitos reservados.</p>
+            <p className="text-sm text-white/55">© 2026. Todos os direitos reservados.</p>
             <div className="flex flex-wrap items-center justify-center gap-5 text-xs uppercase tracking-[0.12em] text-white/65">
               <Link to="/privacidade" className="transition-colors hover:text-brand-secondary">Privacidade</Link>
               <Link to="/termos" className="transition-colors hover:text-brand-secondary">Termos</Link>
