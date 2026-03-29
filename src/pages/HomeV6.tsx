@@ -5,28 +5,28 @@ const painPoints = [
   {
     id: '01',
     title: 'Lead sem rastreamento',
-    subtitle: 'Sem visao da origem real',
+    subtitle: 'Voce nao sabe qual campanha gerou venda real',
     metric: '48',
     note: 'leads sem resposta na ultima semana',
   },
   {
     id: '02',
     title: 'Sem follow-up',
-    subtitle: 'Leads esfriam no meio do funil',
+    subtitle: 'Lead esfria porque ninguem foi atras',
     metric: '57%',
     note: 'leads sem contato consistente',
   },
   {
     id: '03',
     title: 'Custo por venda invisivel',
-    subtitle: 'Investimento sem clareza de CAC',
+    subtitle: 'Dinheiro saindo todo mes sem saber o CAC',
     metric: 'R$2.400',
     note: 'investidos sem rastreio completo',
   },
   {
     id: '04',
-    title: 'Campanha otimizada, venda nao',
-    subtitle: 'Marketing e vendas desconectados',
+    title: 'Campanha rodando, venda parada',
+    subtitle: 'Marketing e vendas sem conversa entre si',
     metric: '127',
     note: 'leads que nao viraram cliente',
   },
@@ -35,19 +35,19 @@ const painPoints = [
 const solutions = [
   {
     tag: 'CRM & Automacao',
-    text: 'CRM proprio conectado ao WhatsApp com trilhas de follow-up para nao perder oportunidades.',
+    text: 'CRM conectado ao WhatsApp com follow-up que roda sozinho. O lead nao esfria esperando alguem lembrar.',
   },
   {
     tag: 'Rastreamento',
-    text: 'Tracking de ponta a ponta para saber de onde veio cada venda e onde o funil trava.',
+    text: 'Voce sabe de onde veio cada venda e onde o funil esta travando. Sem isso, qualquer decisao e chute.',
   },
   {
     tag: 'Qualificacao',
-    text: 'Leads entram por etapa e temperatura, com regras claras para time comercial atuar no momento certo.',
+    text: 'Cada lead entra na etapa certa, com temperatura definida. O time comercial atua quando faz sentido, nao o tempo todo.',
   },
   {
     tag: 'Otimizacao',
-    text: 'Decisoes com base em dados reais, nao achismo. Ajuste semanal de campanhas e processo comercial.',
+    text: 'Ajuste semanal de campanha e processo com base no que os numeros mostram, nao no que parece estar funcionando.',
   },
 ];
 
@@ -55,22 +55,22 @@ const flow = [
   {
     id: '01',
     title: 'Diagnostico',
-    text: 'Mapeamos gargalos de geracao, atendimento e fechamento antes de escalar investimento.',
+    text: 'Antes de escalar investimento, a gente mapeia onde os leads somem: na geracao, no atendimento ou no fechamento.',
   },
   {
     id: '02',
     title: 'Estruturacao',
-    text: 'Configuramos CRM, tracking, automacoes e integraremos marketing com vendas.',
+    text: 'CRM, tracking e automacoes configurados. Marketing e vendas passam a falar a mesma lingua.',
   },
   {
     id: '03',
     title: 'Aquisicao',
-    text: 'Ativamos campanhas com segmentacao precisa e criativos orientados a oportunidade real.',
+    text: 'Campanhas ativadas nas plataformas certas, com criativos que ja foram testados para gerar oportunidade real.',
   },
   {
     id: '04',
     title: 'Qualificacao',
-    text: 'Leads recebem fluxo inteligente ate chegar no momento certo para conversao.',
+    text: 'O lead recebe contato no momento certo, na etapa certa. Sem spam, sem silencio.',
   },
 ];
 
@@ -114,11 +114,11 @@ export default function HomeV6() {
               <div className="rounded-3xl border border-white/12 bg-black/30 p-8 md:p-10">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-secondary/90">Trafego, CRM e automacao</p>
                 <h1 className="mt-4 font-sans text-4xl font-bold leading-tight text-white md:text-6xl">
-                  Transforme leads em
-                  <span className="text-brand-secondary"> vendas previsiveis</span>
+                  Pare de gerar leads.
+                  <span className="text-brand-secondary"> Comece a fechar clientes.</span>
                 </h1>
                 <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75 md:text-lg">
-                  Voce nao precisa de mais cliques. Precisa de um sistema que acompanhe o lead do primeiro toque ate o fechamento.
+                  Mais cliques nao resolvem o problema. O que falta e um processo que acompanha o lead do primeiro contato ate o fechamento, sem depender de memoria ou improviso.
                 </p>
 
                 <div className="mt-9 flex flex-wrap gap-4">
@@ -193,7 +193,7 @@ export default function HomeV6() {
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-secondary/85">01 · Problema de mercado</p>
               <h2 className="mt-4 font-sans text-3xl font-bold leading-tight text-white md:text-5xl">
                 Seu problema nao e trafego.
-                <span className="text-brand-secondary"> E perda de receita no meio do funil.</span>
+                <span className="text-brand-secondary"> E receita que vaza no meio do funil.</span>
               </h2>
 
               <div className="mt-9 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
@@ -214,8 +214,8 @@ export default function HomeV6() {
             <div className="mx-auto w-full max-w-7xl">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-secondary/85">02 · Solucao</p>
               <h2 className="mt-4 font-sans text-3xl font-bold leading-tight text-white md:text-5xl">
-                Aqui nao entregamos so trafego.
-                <span className="text-brand-secondary"> Conectamos marketing e vendas de ponta a ponta.</span>
+                Aqui nao e so trafego.
+                <span className="text-brand-secondary"> E o processo inteiro, do clique ao fechamento.</span>
               </h2>
 
               <div className="mt-9 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
