@@ -409,6 +409,17 @@ footer p{font-family:'DM Mono',monospace;font-size:.6rem;color:var(--muted);lett
   .step-tag{display:none}
   footer{padding:2rem 1.5rem;flex-direction:column;text-align:center}
 }
+@media(max-width:600px){
+  .hero{min-height:100svh;padding:0 1.25rem 3.5rem}
+  .hero-h1{font-size:clamp(2.2rem,11vw,3rem);line-height:1}
+  .hero-h1 .line1,.hero-h1 .line2{white-space:normal}
+  .hero-h1 .line3{font-size:clamp(1.8rem,9vw,2.4rem);white-space:normal}
+  .hero-sub{font-size:.9rem}
+  .hero-actions{flex-direction:column;align-items:flex-start;gap:1rem}
+  .hero-stats{gap:1.5rem;margin-top:2.5rem}
+  .s-h2{font-size:clamp(1.8rem,8vw,2.2rem)!important;line-height:1.05!important}
+  .cta-h2{font-size:clamp(2rem,9vw,2.5rem)!important;line-height:1.05!important}
+}
 
 /* ENTRANCE ANIMATIONS */
 .fade-up{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
