@@ -74,6 +74,13 @@ const flow = [
   },
 ];
 
+const quickSignals = [
+  ['Taxa de contato', '71%'],
+  ['Tempo medio de resposta', '4m'],
+  ['Leads qualificados', '185'],
+  ['ROI projetado', '4.2x'],
+];
+
 export default function HomeV6() {
   return (
     <div className="min-h-screen bg-[#070a10] text-white selection:bg-brand-primary selection:text-black">
@@ -152,6 +159,29 @@ export default function HomeV6() {
                       </div>
                     </div>
                   ))}
+                </div>
+
+                <div className="mt-6 rounded-2xl border border-white/12 bg-black/35 p-4">
+                  <p className="text-xs uppercase tracking-[0.14em] text-white/58">Leitura rapida do funil</p>
+                  <div className="mt-4 grid grid-cols-2 gap-3">
+                    {quickSignals.map(([label, value]) => (
+                      <div key={label} className="rounded-xl border border-white/10 bg-[#0a1018] p-3">
+                        <p className="text-[0.64rem] uppercase tracking-[0.12em] text-white/55">{label}</p>
+                        <p className="mt-1 text-xl font-black text-brand-secondary">{value}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-4 rounded-xl border border-white/10 bg-[#0a1018] p-3">
+                    <div className="flex items-center justify-between text-[0.65rem] uppercase tracking-[0.12em] text-white/58">
+                      <span>Meta do ciclo atual</span>
+                      <span>R$ 90.000</span>
+                    </div>
+                    <div className="mt-2 h-2 rounded-full bg-white/10">
+                      <div className="h-full w-[56%] rounded-full bg-gradient-to-r from-brand-primary via-amber-300 to-brand-secondary" />
+                    </div>
+                    <p className="mt-2 text-[0.68rem] uppercase tracking-[0.11em] text-white/50">56% da meta atingida</p>
+                  </div>
                 </div>
 
               </aside>
