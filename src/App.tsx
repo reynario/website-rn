@@ -1,467 +1,329 @@
-import React from 'react';
-import { 
-  BrowserRouter as Router, 
-  Routes, 
-  Route, 
-  Link 
-} from 'react-router-dom';
-import { 
-  ArrowRight, 
-  CheckCircle2, 
-  BarChart3, 
-  MessageSquare, 
-  Zap, 
+﻿import React from 'react';
+import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+import {
+  ArrowRight,
+  BarChart3,
+  CheckCircle2,
+  CircleDollarSign,
+  Gauge,
+  Layers3,
+  MessageSquareMore,
+  Radar,
+  Sparkles,
   Target,
-  LayoutDashboard,
-  ShieldCheck,
-  MousePointerClick,
-  AlertCircle
+  Workflow,
 } from 'lucide-react';
 import { motion } from 'motion/react';
+import HomeV2 from './pages/HomeV2';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfUse from './pages/TermsOfUse';
 import Logo from './components/Logo';
 
-const fadeIn = {
-  initial: { opacity: 0, y: 20 },
+const fadeUp = {
+  initial: { opacity: 0, y: 22 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.6 }
+  viewport: { once: true, amount: 0.25 },
+  transition: { duration: 0.55 },
 };
 
-const staggerContainer = {
-  initial: {},
-  whileInView: { transition: { staggerChildren: 0.1 } },
-  viewport: { once: true }
-};
+const processSteps = [
+  {
+    id: '01',
+    title: 'Diagnostico de Funil',
+    text: 'Mapeamos origem, atendimento e fechamento para descobrir onde voce perde receita.',
+  },
+  {
+    id: '02',
+    title: 'Arquitetura de Midia',
+    text: 'Estruturamos campanhas por intencao de compra com regras de escala e protecao de margem.',
+  },
+  {
+    id: '03',
+    title: 'CRM de Conversao',
+    text: 'Conectamos WhatsApp, qualificacao e follow-up para reduzir o tempo entre lead e proposta.',
+  },
+  {
+    id: '04',
+    title: 'Rotina de Otimizacao',
+    text: 'Ajustes semanais guiados por CAC, taxa de resposta e valor por oportunidade real.',
+  },
+];
 
-const Home = () => {
+const stackItems = [
+  {
+    icon: Target,
+    title: 'Midia de Alta Intencao',
+    text: 'Meta, Google e criativos orientados por etapa de funil, nao por vaidade de clique.',
+  },
+  {
+    icon: MessageSquareMore,
+    title: 'Orquestracao Comercial',
+    text: 'SLA, templates e automacoes para o time responder rapido e converter melhor.',
+  },
+  {
+    icon: CircleDollarSign,
+    title: 'Painel de Receita',
+    text: 'Visao consolidada de investimento, oportunidades e vendas com leitura executiva.',
+  },
+  {
+    icon: Workflow,
+    title: 'Playbooks de Escala',
+    text: 'Regras claras para duplicar o que funciona e cortar o que drena verba.',
+  },
+];
+
+const HomeV3 = () => {
   return (
-    <div className="min-h-screen selection:bg-brand-primary selection:text-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 glass border-b border-white/5">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <Link to="/">
+    <div className="v3-root min-h-screen selection:bg-brand-primary selection:text-black">
+      <div className="v3-noise" aria-hidden="true" />
+      <div className="v3-rings" aria-hidden="true" />
+
+      <nav className="fixed top-0 z-50 w-full border-b border-white/10 bg-dark-bg/85 backdrop-blur-md">
+        <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6">
+          <Link to="/" className="flex items-center gap-3">
             <Logo />
+            <div className="hidden text-xs uppercase tracking-[0.22em] text-white/60 md:block">
+              Performance Lab
+            </div>
           </Link>
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-white/70">
-            <a href="#problema" className="hover:text-white transition-colors">Realidade do Mercado</a>
-            <a href="#solucao" className="hover:text-white transition-colors">Solução</a>
-            <a href="#como-funciona" className="hover:text-white transition-colors">Como Funciona</a>
-            <a href="#entrega" className="hover:text-white transition-colors">O que você recebe</a>
+
+          <div className="hidden items-center gap-7 text-xs font-semibold uppercase tracking-[0.14em] text-white/70 md:flex">
+            <a href="#sinais" className="hover:text-brand-secondary transition-colors">Sinais de Vazamento</a>
+            <a href="#metodo" className="hover:text-brand-secondary transition-colors">Metodo</a>
+            <a href="#stack" className="hover:text-brand-secondary transition-colors">Stack</a>
           </div>
-          <a 
-            href="https://wa.me/5575981642126" 
-            target="_blank" 
+
+          <a
+            href="https://wa.me/5575981642126"
+            target="_blank"
             rel="noopener noreferrer"
-            className="bg-white text-black px-6 py-2.5 rounded-full text-sm font-bold hover:bg-brand-secondary hover:text-white transition-all duration-300"
+            className="rounded-full border border-brand-primary px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-brand-secondary transition-all hover:-translate-y-0.5 hover:bg-brand-primary hover:text-black"
           >
-            Falar com Especialista
+            Falar com Time
           </a>
         </div>
       </nav>
 
-      {/* Main content */}
       <main>
-
-      {/* Hero Section */}
-      <section className="relative pt-40 pb-20 overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
-          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-brand-primary/20 blur-[120px] rounded-full" />
-          <div className="absolute bottom-[10%] right-[-10%] w-[30%] h-[30%] bg-brand-secondary/10 blur-[100px] rounded-full" />
-          <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none" 
-               style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
-        </div>
-
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass mb-8 border-brand-primary/20"
-          >
-            <span className="w-2 h-2 rounded-full bg-brand-secondary animate-pulse" />
-            <span className="text-xs font-bold tracking-widest uppercase text-brand-secondary">Foco Total em Vendas</span>
-          </motion.div>
-          
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="font-display text-5xl md:text-7xl font-extrabold leading-[1.1] mb-8 max-w-4xl mx-auto"
-          >
-            Mais clientes qualificados todos os dias com <span className="gradient-text">controle total</span> do seu funil
-          </motion.h1>
-
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-12 leading-relaxed"
-          >
-            Unimos tráfego pago, CRM próprio e automações para transformar leads em vendas com previsibilidade.
-          </motion.p>
-
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
-          >
-            <a 
-              href="https://wa.me/5575981642126" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto bg-gradient-to-r from-brand-secondary to-brand-primary px-8 py-4 rounded-full font-bold text-lg hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-all flex items-center justify-center gap-2 group"
-            >
-              Quero mais leads qualificados
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
-          </motion.div>
-
-          {/* Abstract Dashboard Visual */}
-          <motion.div 
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 1 }}
-            className="mt-20 relative max-w-5xl mx-auto"
-          >
-            <div className="absolute -inset-4 bg-gradient-to-b from-brand-primary/20 to-transparent blur-2xl rounded-[2rem] -z-10" />
-            <div className="glass rounded-2xl p-4 overflow-hidden shadow-2xl border-white/10">
-              <div className="flex items-center gap-2 mb-4 px-2">
-                <div className="w-3 h-3 rounded-full bg-red-500/50" />
-                <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
-                <div className="w-3 h-3 rounded-full bg-green-500/50" />
+        <section className="relative overflow-hidden px-6 pb-20 pt-36 md:pt-44">
+          <div className="mx-auto grid w-full max-w-7xl items-end gap-12 lg:grid-cols-[1.1fr_.9fr]">
+            <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+              <div className="inline-flex items-center gap-2 rounded-full border border-brand-primary/30 bg-white/5 px-4 py-2 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-brand-secondary">
+                <Sparkles className="h-3.5 w-3.5" />
+                V3 \ War Room de Performance
               </div>
-              <div className="grid grid-cols-12 gap-4">
-                <div className="col-span-3 space-y-4">
-                  <div className="h-32 bg-white/5 rounded-xl animate-pulse" />
-                  <div className="h-48 bg-white/5 rounded-xl animate-pulse" />
-                </div>
-                <div className="col-span-9 space-y-4">
-                  <div className="h-20 bg-gradient-to-r from-brand-primary/10 to-transparent rounded-xl flex items-center px-6 gap-4">
-                    <div className="w-12 h-12 rounded-full bg-brand-primary/20" />
-                    <div className="space-y-2">
-                      <div className="w-32 h-3 bg-white/20 rounded-full" />
-                      <div className="w-20 h-2 bg-white/10 rounded-full" />
+
+              <h1 className="mt-6 font-display text-5xl uppercase leading-[0.93] text-white md:text-7xl">
+                Menos
+                <span className="text-brand-secondary"> achismo.</span>
+                <br />
+                Mais previsibilidade
+                <span className="text-brand-primary"> de receita.</span>
+              </h1>
+
+              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/70">
+                A RN opera como um time de performance plugado no seu negocio: midia, CRM e rotina comercial
+                para transformar leads em venda com controle real de CAC.
+              </p>
+
+              <div className="mt-10 flex flex-wrap items-center gap-4">
+                <a
+                  href="https://wa.me/5575981642126"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-brand-primary px-7 py-4 text-sm font-black uppercase tracking-[0.12em] text-black transition-all hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(250,95,42,0.36)]"
+                >
+                  Quero Escalar com Margem
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+                <a
+                  href="#metodo"
+                  className="rounded-full border border-white/20 px-7 py-4 text-sm font-bold uppercase tracking-[0.12em] text-white/75 transition-all hover:border-brand-secondary hover:text-brand-secondary"
+                >
+                  Ver Metodo
+                </a>
+              </div>
+
+              <div className="mt-10 grid gap-3 sm:grid-cols-3">
+                {[
+                  ['+38%', 'media de ganho em conversao'],
+                  ['-27%', 'queda de custo por oportunidade'],
+                  ['100%', 'visibilidade do funil comercial'],
+                ].map(([value, label]) => (
+                  <div key={label} className="metric-card rounded-2xl border border-white/10 p-4">
+                    <div className="font-display text-3xl uppercase leading-none text-brand-secondary">{value}</div>
+                    <div className="mt-2 text-xs uppercase tracking-[0.11em] text-white/60">{label}</div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 36 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15, duration: 0.65 }}
+              className="v3-panel relative rounded-3xl p-6 md:p-8"
+            >
+              <div className="mb-6 flex items-center justify-between text-xs uppercase tracking-[0.14em] text-white/65">
+                <span>Revenue Control Board</span>
+                <span>Live</span>
+              </div>
+
+              <div className="space-y-5">
+                {[
+                  ['Leads novos', '312', 'up'],
+                  ['Taxa de resposta', '71%', 'up'],
+                  ['Oportunidades quentes', '96', 'up'],
+                  ['CAC atual', 'R$ 84', 'down'],
+                ].map(([name, value, status]) => (
+                  <div key={name} className="rounded-2xl border border-white/10 bg-black/20 p-4">
+                    <div className="flex items-center justify-between text-sm text-white/70">
+                      <span>{name}</span>
+                      <span className={status === 'up' ? 'text-emerald-300' : 'text-brand-primary'}>{status === 'up' ? 'OK' : 'Ajuste'}</span>
+                    </div>
+                    <div className="mt-2 flex items-end justify-between">
+                      <div className="font-display text-4xl uppercase leading-none text-white">{value}</div>
+                      <div className="h-2 w-28 rounded-full bg-white/10">
+                        <div className={`h-full rounded-full ${status === 'up' ? 'w-4/5 bg-emerald-300' : 'w-2/5 bg-brand-primary'}`} />
+                      </div>
                     </div>
                   </div>
-                  <div className="grid grid-cols-3 gap-4">
-                    <div className="h-32 bg-white/5 rounded-xl" />
-                    <div className="h-32 bg-white/5 rounded-xl" />
-                    <div className="h-32 bg-brand-primary/10 rounded-xl border border-brand-primary/20" />
-                  </div>
-                  <div className="h-40 bg-white/5 rounded-xl" />
-                </div>
+                ))}
               </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+            </motion.div>
+          </div>
+        </section>
 
-      {/* Section 1: O Problema */}
-      <section id="problema" className="py-24 bg-dark-surface relative">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <motion.div {...fadeIn}>
-              <div className="inline-flex items-center gap-2 text-red-400 font-bold text-sm uppercase tracking-widest mb-6">
-                <AlertCircle className="w-4 h-4" />
-                Realidade do Mercado
+        <section id="sinais" className="px-6 py-20">
+          <div className="mx-auto w-full max-w-7xl">
+            <motion.div {...fadeUp} className="mb-10 flex items-end justify-between gap-6">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-secondary">Sinais de Vazamento</p>
+                <h2 className="mt-3 font-display text-4xl uppercase text-white md:text-6xl">
+                  Se voce vive isso,
+                  <span className="text-brand-primary"> seu funil esta aberto.</span>
+                </h2>
               </div>
-              <h2 className="font-display text-4xl md:text-5xl font-bold mb-8 leading-tight">
-                Você investe em anúncios, os leads até chegam, mas...
+              <Radar className="hidden h-20 w-20 text-brand-primary/60 lg:block" />
+            </motion.div>
+
+            <div className="grid gap-5 md:grid-cols-3">
+              {[
+                'Leads chegam e somem sem resposta do comercial.',
+                'Voce nao consegue ligar investimento ao faturamento real.',
+                'A equipe ajusta campanha sem criterio unico de receita.',
+              ].map((item, idx) => (
+                <motion.article key={item} {...fadeUp} transition={{ duration: 0.5, delay: idx * 0.08 }} className="rounded-3xl border border-white/10 bg-white/5 p-7">
+                  <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-xl bg-brand-primary/20 font-display text-xl text-brand-secondary">0{idx + 1}</div>
+                  <p className="text-base leading-relaxed text-white/80">{item}</p>
+                </motion.article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="metodo" className="bg-dark-surface px-6 py-20">
+          <div className="mx-auto w-full max-w-7xl">
+            <motion.div {...fadeUp} className="mb-12 max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-secondary">Metodo RN</p>
+              <h2 className="mt-3 font-display text-4xl uppercase text-white md:text-6xl">Processo em 4 sprints de performance</h2>
+              <p className="mt-4 text-lg text-white/70">Cada etapa trava uma fuga de receita. Quando soma, a operacao fica escalavel.</p>
+            </motion.div>
+
+            <div className="grid gap-5 md:grid-cols-2">
+              {processSteps.map((step, idx) => (
+                <motion.article key={step.id} {...fadeUp} transition={{ duration: 0.52, delay: idx * 0.06 }} className="rounded-3xl border border-white/10 bg-black/25 p-7">
+                  <div className="flex items-center justify-between">
+                    <span className="font-display text-5xl uppercase text-brand-primary/80">{step.id}</span>
+                    <Gauge className="h-5 w-5 text-brand-secondary" />
+                  </div>
+                  <h3 className="mt-3 text-2xl font-semibold text-white">{step.title}</h3>
+                  <p className="mt-3 leading-relaxed text-white/70">{step.text}</p>
+                </motion.article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="stack" className="px-6 py-20">
+          <div className="mx-auto w-full max-w-7xl">
+            <motion.div {...fadeUp} className="mb-12 flex flex-wrap items-center justify-between gap-6">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-secondary">Stack de Crescimento</p>
+                <h2 className="mt-3 font-display text-4xl uppercase text-white md:text-6xl">Tudo conectado para vender mais</h2>
+              </div>
+              <Layers3 className="h-16 w-16 text-brand-primary/70" />
+            </motion.div>
+
+            <div className="grid gap-5 md:grid-cols-2">
+              {stackItems.map((item, idx) => (
+                <motion.article key={item.title} {...fadeUp} transition={{ duration: 0.5, delay: idx * 0.07 }} className="rounded-3xl border border-white/10 bg-white/[0.04] p-7">
+                  <item.icon className="h-8 w-8 text-brand-primary" />
+                  <h3 className="mt-5 text-2xl font-semibold text-white">{item.title}</h3>
+                  <p className="mt-3 text-white/70">{item.text}</p>
+                </motion.article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-6 pb-24 pt-8">
+          <div className="mx-auto w-full max-w-6xl rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-brand-primary/15 via-black/30 to-brand-secondary/10 p-10 text-center md:p-16">
+            <motion.div {...fadeUp}>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-secondary">Posicionamento RN</p>
+              <h2 className="mt-4 font-display text-4xl uppercase text-white md:text-6xl">
+                Nao entregamos
+                <span className="text-brand-primary"> trafego isolado.</span>
+                <br />
+                Entregamos sistema de vendas.
               </h2>
-              <p className="text-xl text-white/60 mb-8 leading-relaxed">
-                A maioria não responde, não evolui e não vira venda. Você está jogando dinheiro no lixo porque não tem clareza do seu processo.
+              <p className="mx-auto mt-5 max-w-2xl text-lg text-white/75">
+                Se o lead nao vira proposta, nao e performance. Se nao vira venda, nao e crescimento.
               </p>
-              <ul className="space-y-4">
-                {[
-                  "De onde veio cada lead?",
-                  "Quanto custa cada venda real?",
-                  "Onde exatamente o funil está travando?"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-white/80">
-                    <div className="w-1.5 h-1.5 rounded-full bg-red-400" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-10 p-6 glass border-red-500/20 rounded-2xl">
-                <p className="text-red-400 font-medium">
-                  "No fim, parece que o problema é o tráfego. Mas quase sempre é o processo."
-                </p>
-              </div>
-            </motion.div>
-            
-            <motion.div 
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="aspect-square rounded-3xl overflow-hidden glass border-white/5 p-8 flex flex-col justify-center gap-8">
-                <div className="space-y-4">
-                  <div className="flex justify-between text-sm mb-2">
-                    <span className="text-white/60">Investimento em Ads</span>
-                    <span className="text-white font-bold">R$ 10.000</span>
-                  </div>
-                  <div className="w-full h-3 bg-white/5 rounded-full overflow-hidden">
-                    <div className="w-full h-full bg-brand-primary" />
-                  </div>
-                </div>
-                <div className="space-y-4">
-                  <div className="flex justify-between text-sm mb-2">
-                    <span className="text-white/60">Leads Gerados</span>
-                    <span className="text-white font-bold">450</span>
-                  </div>
-                  <div className="w-full h-3 bg-white/5 rounded-full overflow-hidden">
-                    <div className="w-[60%] h-full bg-brand-secondary" />
-                  </div>
-                </div>
-                <div className="space-y-4 opacity-40">
-                  <div className="flex justify-between text-sm mb-2">
-                    <span className="text-red-400 font-bold">Vendas Realizadas</span>
-                    <span className="text-white font-bold">?</span>
-                  </div>
-                  <div className="w-full h-3 bg-white/5 rounded-full overflow-hidden">
-                    <div className="w-[5%] h-full bg-red-500" />
-                  </div>
-                </div>
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-12">
-                  <div className="bg-red-500 text-white px-6 py-2 rounded-lg font-black text-2xl shadow-2xl border-2 border-white/20">
-                    GARGALO!
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
-      {/* Section 2: A Solução */}
-      <section id="solucao" className="py-24 relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full -z-10 opacity-20">
-          <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-brand-primary blur-[150px] rounded-full" />
-        </div>
-
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div {...fadeIn} className="text-center mb-20">
-            <h2 className="font-display text-4xl md:text-6xl font-bold mb-8">
-              Aqui você não contrata só <span className="text-brand-secondary italic">gestão de tráfego</span>
-            </h2>
-            <p className="text-xl text-white/60 max-w-3xl mx-auto">
-              Você entra em um sistema completo de geração e conversão de leads. Nós estruturamos tudo para você passar a enxergar o que antes era invisível.
-            </p>
-          </motion.div>
-
-          <motion.div 
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="whileInView"
-            viewport={{ once: true }}
-            className="grid md:grid-cols-3 gap-8"
-          >
-            {[
-              { icon: Target, title: "Omnichannel Ads", desc: "Meta, Google, TikTok e LinkedIn Ads integrados." },
-              { icon: LayoutDashboard, title: "CRM Próprio", desc: "Integrado ao WhatsApp para controle total." },
-              { icon: Zap, title: "Automações", desc: "Atendimento e follow up automático 24/7." },
-              { icon: BarChart3, title: "Tracking Real", desc: "Rastreamento real de cada lead até a venda." },
-              { icon: MessageSquare, title: "Filtros Inteligentes", desc: "Qualificação automática antes de chegar no comercial." },
-              { icon: ShieldCheck, title: "Previsibilidade", desc: "Decisões baseadas em dados, não em achismo." }
-            ].map((item, i) => (
-              <motion.div 
-                key={i} 
-                variants={fadeIn}
-                className="p-8 rounded-3xl glass hover:border-brand-primary/50 transition-all group"
+              <a
+                href="https://wa.me/5575981642126"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-9 inline-flex items-center gap-2 rounded-full bg-brand-secondary px-8 py-4 text-sm font-black uppercase tracking-[0.12em] text-black transition-all hover:-translate-y-1 hover:bg-brand-primary"
               >
-                <div className="w-14 h-14 rounded-2xl bg-brand-primary/10 flex items-center justify-center mb-6 group-hover:bg-brand-primary/20 transition-colors">
-                  <item.icon className="w-7 h-7 text-brand-secondary" />
-                </div>
-                <h3 className="text-xl font-bold mb-4">{item.title}</h3>
-                <p className="text-white/50 leading-relaxed">{item.desc}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+                Agendar Diagnostico
+                <ArrowRight className="h-4 w-4" />
+              </a>
 
-      {/* Section 3: Como Funciona */}
-      <section id="como-funciona" className="py-24 bg-dark-surface">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-            <div className="max-w-2xl">
-              <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">O Caminho para a Escala</h2>
-              <p className="text-white/60 text-lg">Um processo estruturado em 5 etapas para garantir que nenhum lead seja desperdiçado.</p>
-            </div>
-            <div className="text-brand-secondary font-display text-8xl font-black opacity-10 hidden lg:block uppercase">PROCESSO</div>
-          </div>
-
-          <div className="grid md:grid-cols-5 gap-4">
-            {[
-              { step: "01", title: "Estruturação", desc: "Organizamos campanhas, tracking e funil completo." },
-              { step: "02", title: "Geração", desc: "Ativamos campanhas nas plataformas certas." },
-              { step: "03", title: "Qualificação", desc: "Filtros e mensagens inteligentes no CRM." },
-              { step: "04", title: "Acompanhamento", desc: "Monitoramento de cada lead até virar cliente." },
-              { step: "05", title: "Otimização", desc: "Decisões baseadas em dados reais." }
-            ].map((item, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                viewport={{ once: true }}
-                className="relative p-8 rounded-2xl border border-white/5 hover:bg-white/5 transition-colors"
-              >
-                <span className="text-brand-primary font-display font-black text-4xl block mb-6 opacity-30">{item.step}</span>
-                <h3 className="font-bold text-lg mb-3">{item.title}</h3>
-                <p className="text-sm text-white/50 leading-relaxed">{item.desc}</p>
-                {i < 4 && <ArrowRight className="absolute -right-4 top-1/2 -translate-y-1/2 text-white/10 w-8 h-8 hidden md:block" />}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Section 4: O que você recebe */}
-      <section id="entrega" className="py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20">
-            <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">Entrega Completa</h2>
-            <p className="text-white/60 text-lg">Tudo o que você precisa para dominar o seu mercado.</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { title: "Gestão de tráfego completa", desc: "Meta Ads, Google Ads, TikTok e LinkedIn.", icon: MousePointerClick },
-              { title: "CRM Próprio", desc: "Controle total dos leads e histórico de atendimento.", icon: LayoutDashboard },
-              { icon: MessageSquare, title: "Integração WhatsApp", desc: "Histórico de conversas e envio de compra para o meta." },
-              { icon: Zap, title: "Automação de leads", desc: "Follow up semi-automático e qualificação do lead." },
-              { icon: BarChart3, title: "Painel de acompanhamento", desc: "Visual claro de campanhas, leads e ROI." },
-              { icon: Target, title: "Gestão de funil", desc: "Do clique até o fechamento com visão completa.", highlight: true }
-            ].map((item, i) => (
-              <div key={i} className={`p-8 rounded-3xl border ${item.highlight ? 'border-brand-primary bg-brand-primary/5' : 'border-white/5 glass'}`}>
-                <item.icon className={`w-10 h-10 mb-6 ${item.highlight ? 'text-brand-secondary' : 'text-white/40'}`} />
-                <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                <p className="text-white/50">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Section 5: Diferencial */}
-      <section className="py-24 bg-brand-primary/5 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 pointer-events-none" 
-             style={{ backgroundImage: 'linear-gradient(45deg, #3B82F6 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
-        
-        <div className="max-w-7xl mx-auto px-6 relative">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <motion.div {...fadeIn}>
-              <h2 className="font-display text-4xl md:text-5xl font-bold mb-8">
-                A maioria das agências <span className="text-white/40">para no lead</span>.
-              </h2>
-              <div className="text-6xl md:text-7xl font-display font-black gradient-text mb-8">
-                Aqui o foco é a venda.
-              </div>
-              <div className="space-y-6 text-xl text-white/70">
-                <p>Se o lead não vira cliente, a gente ajusta o processo.</p>
-                <p>Se o funil trava, a gente corrige.</p>
-                <p>Se a campanha não performa, a gente otimiza.</p>
-                <div className="pt-4 flex items-center gap-3 text-brand-secondary font-bold">
-                  <CheckCircle2 className="w-6 h-6" />
-                  Tudo conectado.
-                </div>
+              <div className="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-white/65">
+                <span className="inline-flex items-center gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-emerald-300" />
+                  Operacao orientada por receita
+                </span>
+                <span className="inline-flex items-center gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-emerald-300" />
+                  Time de marketing + comercial
+                </span>
+                <span className="inline-flex items-center gap-2">
+                  <BarChart3 className="h-4 w-4 text-brand-primary" />
+                  Dashboard executivo de performance
+                </span>
               </div>
             </motion.div>
-            <div className="relative">
-              <div className="aspect-video rounded-3xl glass border-brand-primary/30 p-1 flex items-center justify-center">
-                <div className="w-full h-full rounded-[inherit] bg-dark-bg flex items-center justify-center overflow-hidden">
-                   <div className="relative w-full h-full">
-                      <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/20 to-transparent" />
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 space-y-4">
-                         <div className="h-4 bg-white/5 rounded-full w-full" />
-                         <div className="h-4 bg-white/5 rounded-full w-3/4" />
-                         <div className="h-4 bg-brand-primary/40 rounded-full w-1/2" />
-                         <div className="h-4 bg-white/5 rounded-full w-full" />
-                      </div>
-                   </div>
-                </div>
-              </div>
-              <div className="absolute -bottom-6 -right-6 glass p-6 rounded-2xl border-brand-secondary/30 shadow-2xl animate-bounce">
-                <div className="text-brand-secondary font-black text-3xl">+42%</div>
-                <div className="text-xs font-bold uppercase tracking-widest text-white/50">Conversão Média</div>
-              </div>
-            </div>
           </div>
-        </div>
-      </section>
-
-      {/* Section 6: Para quem é */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="glass rounded-[3rem] p-12 md:p-20 overflow-hidden relative">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-primary/20 blur-[100px] rounded-full" />
-            
-            <div className="relative z-10">
-              <h2 className="font-display text-4xl md:text-5xl font-bold mb-12 text-center">Para quem é este sistema?</h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                {[
-                  "Empresas que já investem ou querem investir em tráfego",
-                  "Negócios que dependem de leads para vender",
-                  "Empresas que querem previsibilidade de crescimento",
-                  "Quem está cansado de investir sem saber o que está acontecendo"
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-4 p-6 rounded-2xl bg-white/5 border border-white/5">
-                    <CheckCircle2 className="w-6 h-6 text-brand-secondary shrink-0 mt-1" />
-                    <span className="text-lg text-white/80">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 7: Final CTA */}
-      <section className="py-24 text-center relative">
-        <div className="max-w-4xl mx-auto px-6">
-          <motion.div {...fadeIn}>
-            <h2 className="font-display text-4xl md:text-6xl font-bold mb-8">
-              Pare de depender de tentativa e erro.
-            </h2>
-            <p className="text-xl text-white/60 mb-12">
-              Comece a ter controle real das suas vendas hoje mesmo.
-            </p>
-            <a 
-              href="https://wa.me/5575981642126" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-white text-black px-10 py-5 rounded-full font-black text-xl hover:bg-brand-secondary hover:text-white transition-all shadow-[0_0_50px_rgba(255,255,255,0.1)] group"
-            >
-              Quero estruturar meu funil
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </a>
-            <p className="mt-8 text-white/40 text-sm font-medium">
-              Fale com nosso time agora.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
+        </section>
       </main>
 
-      {/* Footer */}
-      <footer className="py-12 border-t border-white/5 bg-dark-bg">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
-          <Link to="/">
+      <footer className="border-t border-white/10 bg-dark-bg/95 py-10">
+        <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-7 px-6 text-center md:flex-row md:text-left">
+          <Link to="/" className="flex items-center gap-3">
             <Logo />
+            <span className="text-xs uppercase tracking-[0.2em] text-white/60">RN Digital Midia V3</span>
           </Link>
-          <p className="text-white/60 text-sm">© 2026 RN Digital Mídia. Todos os direitos reservados.</p>
-          <div className="flex gap-6 text-white/60 text-sm">
-            <a href="/v1/" className="hover:text-white transition-colors">Versao v1</a>
-            <Link to="/privacidade" className="hover:text-white transition-colors">Privacidade</Link>
-            <Link to="/termos" className="hover:text-white transition-colors">Termos</Link>
+
+          <p className="text-sm text-white/50">© 2026 RN Digital Midia. Todos os direitos reservados.</p>
+
+          <div className="flex items-center gap-6 text-xs uppercase tracking-[0.12em] text-white/65">
+            <a href="/v1/" className="hover:text-brand-secondary transition-colors">Versao v1</a>
+            <Link to="/" className="hover:text-brand-secondary transition-colors">Versao v2</Link>
+            <Link to="/privacidade" className="hover:text-brand-secondary transition-colors">Privacidade</Link>
+            <Link to="/termos" className="hover:text-brand-secondary transition-colors">Termos</Link>
           </div>
         </div>
       </footer>
@@ -473,11 +335,11 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<HomeV2 />} />
+        <Route path="/v3" element={<HomeV3 />} />
         <Route path="/privacidade" element={<PrivacyPolicy />} />
         <Route path="/termos" element={<TermsOfUse />} />
       </Routes>
     </Router>
   );
 }
-
