@@ -1,4 +1,5 @@
-import React from 'react';
+﻿import React from 'react';
+import './HomeV4.fonts.css';
 import { Link } from 'react-router-dom';
 import {
   ArrowRight,
@@ -268,12 +269,13 @@ export default function HomeV4() {
             <span className="text-xs uppercase tracking-[0.2em] text-white/62">RN Digital Midia V4</span>
           </Link>
 
-          <p className="text-sm text-white/50">© 2026 RN Digital Midia. Todos os direitos reservados.</p>
+          <p className="text-sm text-white/50">Â© 2026 RN Digital Midia. Todos os direitos reservados.</p>
 
           <div className="flex items-center gap-5 text-xs uppercase tracking-[0.12em] text-white/65">
             <a href="/v1/" className="hover:text-brand-secondary transition-colors">Versao v1</a>
             <Link to="/" className="hover:text-brand-secondary transition-colors">Versao v2</Link>
             <Link to="/v3" className="hover:text-brand-secondary transition-colors">Versao v3</Link>
+            <Link to="/v5" className="hover:text-brand-secondary transition-colors">Versao v5</Link>
             <Link to="/privacidade" className="hover:text-brand-secondary transition-colors">Privacidade</Link>
             <Link to="/termos" className="hover:text-brand-secondary transition-colors">Termos</Link>
           </div>
@@ -282,3 +284,4 @@ export default function HomeV4() {
     </div>
   );
 }
+

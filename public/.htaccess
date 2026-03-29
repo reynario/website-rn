@@ -60,3 +60,14 @@ RewriteRule . /index.html [L]
     AddOutputFilterByType DEFLATE image/svg+xml
     AddOutputFilterByType DEFLATE font/woff2
 </IfModule>
+
+# Brotli (quando modulo estiver disponivel no servidor)
+<IfModule mod_brotli.c>
+    AddOutputFilterByType BROTLI_COMPRESS text/plain
+    AddOutputFilterByType BROTLI_COMPRESS text/css
+    AddOutputFilterByType BROTLI_COMPRESS text/javascript
+    AddOutputFilterByType BROTLI_COMPRESS application/javascript
+    AddOutputFilterByType BROTLI_COMPRESS application/json
+    AddOutputFilterByType BROTLI_COMPRESS image/svg+xml
+    AddOutputFilterByType BROTLI_COMPRESS font/woff2
+</IfModule>

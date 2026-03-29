@@ -1,4 +1,5 @@
 ﻿import React from 'react';
+import './HomeV2.fonts.css';
 import { 
   Link 
 } from 'react-router-dom';
@@ -451,6 +452,7 @@ export default function HomeV2() {
             <a href="/v1/" className="hover:text-white transition-colors">Versao v1</a>
             <Link to="/v3" className="hover:text-white transition-colors">Versao v3</Link>
             <Link to="/v4" className="hover:text-white transition-colors">Versao v4</Link>
+            <Link to="/v5" className="hover:text-white transition-colors">Versao v5</Link>
             <Link to="/privacidade" className="hover:text-white transition-colors">Privacidade</Link>
             <Link to="/termos" className="hover:text-white transition-colors">Termos</Link>
           </div>
@@ -459,4 +461,5 @@ export default function HomeV2() {
     </div>
   );
 }
+
 

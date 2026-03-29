@@ -5,6 +5,10 @@ export default function Logo() {
         <img
           src="/logo.webp"
           alt="RN Digital Midia Logo"
+          width={40}
+          height={40}
+          decoding="async"
+          fetchPriority="high"
           className="w-full h-full object-cover"
           referrerPolicy="no-referrer"
         />
