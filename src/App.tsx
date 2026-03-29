@@ -61,6 +61,9 @@ const Home = () => {
         </div>
       </nav>
 
+      {/* Main content */}
+      <main>
+
       {/* Hero Section */}
       <section className="relative pt-40 pb-20 overflow-hidden">
         {/* Background Elements */}
@@ -311,7 +314,7 @@ const Home = () => {
                 className="relative p-8 rounded-2xl border border-white/5 hover:bg-white/5 transition-colors"
               >
                 <span className="text-brand-primary font-display font-black text-4xl block mb-6 opacity-30">{item.step}</span>
-                <h4 className="font-bold text-lg mb-3">{item.title}</h4>
+                <h3 className="font-bold text-lg mb-3">{item.title}</h3>
                 <p className="text-sm text-white/50 leading-relaxed">{item.desc}</p>
                 {i < 4 && <ArrowRight className="absolute -right-4 top-1/2 -translate-y-1/2 text-white/10 w-8 h-8 hidden md:block" />}
               </motion.div>
@@ -446,14 +449,16 @@ const Home = () => {
         </div>
       </section>
 
+      </main>
+
       {/* Footer */}
       <footer className="py-12 border-t border-white/5 bg-dark-bg">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
           <Link to="/">
             <Logo />
           </Link>
-          <p className="text-white/30 text-sm">© 2026 RN Digital Mídia. Todos os direitos reservados.</p>
-          <div className="flex gap-6 text-white/40 text-sm">
+          <p className="text-white/60 text-sm">© 2026 RN Digital Mídia. Todos os direitos reservados.</p>
+          <div className="flex gap-6 text-white/60 text-sm">
             <a href="/v1/" className="hover:text-white transition-colors">Versao v1</a>
             <Link to="/privacidade" className="hover:text-white transition-colors">Privacidade</Link>
             <Link to="/termos" className="hover:text-white transition-colors">Termos</Link>

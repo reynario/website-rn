@@ -3,8 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/logo.webp" type="image/webp">
 <title>RN Digital Midia | Performance Marketing e CRM</title>
 <meta name="description" content="Mais clientes qualificados todos os dias com controle total do seu funil. Trafego pago, CRM proprio e automacoes para aumentar vendas com previsibilidade.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -180,7 +183,7 @@ nav{
 @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .m-item{
   font-family:'DM Mono',monospace;font-size:.62rem;font-weight:500;
-  letter-spacing:.2em;text-transform:uppercase;color:var(--muted);
+  letter-spacing:.2em;text-transform:uppercase;color:var(--silver2);
   padding:0 2.5rem;white-space:nowrap;display:flex;align-items:center;
 }
 .m-item::after{content:'◆';color:rgba(90,159,212,.5);font-size:.45rem;margin-left:2.5rem}
@@ -429,6 +432,7 @@ footer p{font-family:'DM Mono',monospace;font-size:.6rem;color:var(--muted);lett
   <a href="https://wa.me/5575981642126" class="nav-cta">Falar com a equipe</a>
 </nav>
 
+<main>
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-orb"></div>
@@ -802,5 +806,6 @@ document.querySelectorAll('.hero .fade-up').forEach((el, i) => {
   setTimeout(() => el.classList.add('visible'), 200 + i * 150);
 });
 </script>
+</main>
 </body>
 </html>
