@@ -450,6 +450,7 @@ export default function HomeV2() {
           <div className="flex gap-6 text-white/40 text-sm">
             <a href="/v1/" className="hover:text-white transition-colors">Versao v1</a>
             <Link to="/v3" className="hover:text-white transition-colors">Versao v3</Link>
+            <Link to="/v4" className="hover:text-white transition-colors">Versao v4</Link>
             <Link to="/privacidade" className="hover:text-white transition-colors">Privacidade</Link>
             <Link to="/termos" className="hover:text-white transition-colors">Termos</Link>
           </div>

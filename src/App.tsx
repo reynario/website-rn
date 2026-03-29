@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { motion } from 'motion/react';
 import HomeV2 from './pages/HomeV2';
+import HomeV4 from './pages/HomeV4';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfUse from './pages/TermsOfUse';
 import Logo from './components/Logo';
@@ -322,6 +323,7 @@ const HomeV3 = () => {
           <div className="flex items-center gap-6 text-xs uppercase tracking-[0.12em] text-white/65">
             <a href="/v1/" className="hover:text-brand-secondary transition-colors">Versao v1</a>
             <Link to="/" className="hover:text-brand-secondary transition-colors">Versao v2</Link>
+            <Link to="/v4" className="hover:text-brand-secondary transition-colors">Versao v4</Link>
             <Link to="/privacidade" className="hover:text-brand-secondary transition-colors">Privacidade</Link>
             <Link to="/termos" className="hover:text-brand-secondary transition-colors">Termos</Link>
           </div>
@@ -337,6 +339,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomeV2 />} />
         <Route path="/v3" element={<HomeV3 />} />
+        <Route path="/v4" element={<HomeV4 />} />
         <Route path="/privacidade" element={<PrivacyPolicy />} />
         <Route path="/termos" element={<TermsOfUse />} />
       </Routes>

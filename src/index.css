@@ -1,4 +1,4 @@
-﻿@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Bebas+Neue&family=Inter:wght@400;500;700;800&family=Outfit:wght@400;600;700;800&display=swap");
+﻿@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Bebas+Neue&family=Inter:wght@400;500;700;800&family=Outfit:wght@400;600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -77,4 +77,60 @@
   --color-dark-bg: #050505;
   --color-dark-surface: #121212;
   --color-dark-border: #262626;
+}
+
+.theme-v4 {
+  --font-sans: "Work Sans", "Segoe UI", sans-serif;
+  --font-display: "Outfit", "Segoe UI", sans-serif;
+  --color-brand-primary: #6daee0;
+  --color-brand-secondary: #b5ddff;
+  --color-brand-accent: #4f90c2;
+  --color-dark-bg: #101318;
+  --color-dark-surface: #171d26;
+  --color-dark-border: #2b3441;
+}
+
+.theme-v4.v4-root {
+  position: relative;
+  isolation: isolate;
+}
+
+.theme-v4 .v4-grid {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(109, 174, 224, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(109, 174, 224, 0.09) 1px, transparent 1px);
+  background-size: 42px 42px;
+  opacity: 0.2;
+}
+
+.theme-v4 .v4-blur {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 12%, rgba(181, 221, 255, 0.26), transparent 42%),
+    radial-gradient(circle at 82% 18%, rgba(109, 174, 224, 0.2), transparent 40%),
+    radial-gradient(circle at 50% 85%, rgba(79, 144, 194, 0.14), transparent 46%);
+  filter: blur(10px);
+}
+
+.theme-v4 .v4-panel {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(145deg, rgba(23, 29, 38, 0.96) 0%, rgba(14, 18, 25, 0.95) 100%);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.48);
+}
+
+.theme-v4 .v4-card {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(145deg, rgba(23, 29, 38, 0.72) 0%, rgba(16, 19, 24, 0.72) 100%);
+}
+
+.theme-v4 .v4-step {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(145deg, rgba(23, 29, 38, 0.75) 0%, rgba(13, 17, 24, 0.78) 100%);
 }
