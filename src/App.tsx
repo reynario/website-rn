@@ -5,6 +5,7 @@ const HomeV2 = lazy(() => import('./pages/HomeV2'));
 const HomeV3 = lazy(() => import('./pages/HomeV3'));
 const HomeV4 = lazy(() => import('./pages/HomeV4'));
 const HomeV5 = lazy(() => import('./pages/HomeV5'));
+const HomeV6 = lazy(() => import('./pages/HomeV6'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const TermsOfUse = lazy(() => import('./pages/TermsOfUse'));
 
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/v3" element={<HomeV3 />} />
           <Route path="/v4" element={<HomeV4 />} />
           <Route path="/v5" element={<HomeV5 />} />
+          <Route path="/v6" element={<HomeV6 />} />
           <Route path="/privacidade" element={<PrivacyPolicy />} />
           <Route path="/termos" element={<TermsOfUse />} />
         </Routes>

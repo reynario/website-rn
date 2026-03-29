@@ -1,47 +1,34 @@
 ﻿import React from 'react';
 import { Link } from 'react-router-dom';
-import {
-  ArrowRight,
-  BarChart3,
-  CheckCircle2,
-  Gauge,
-  Layers3,
-  MessageSquareMore,
-  Radar,
-  Sparkles,
-  Target,
-  Workflow,
-} from 'lucide-react';
-import Logo from '../components/Logo';
 
 const solutionItems = [
   {
-    icon: Target,
+    glyph: 'ADS',
     title: 'Meta, Google, TikTok & LinkedIn Ads',
     text: 'Campanhas ativas nas plataformas certas para o seu publico e com estrategia integrada.',
   },
   {
-    icon: MessageSquareMore,
+    glyph: 'CRM',
     title: 'CRM Proprio + WhatsApp',
     text: 'CRM integrado ao WhatsApp para centralizar conversas, organizar etapas e automatizar o atendimento.',
   },
   {
-    icon: Workflow,
+    glyph: 'AUTO',
     title: 'Automacao de Follow-up',
     text: 'Nenhum lead esfria. Follow-up semi-automatico, qualificacao inteligente e avisos de temperatura.',
   },
   {
-    icon: Gauge,
+    glyph: 'FUNIL',
     title: 'Acompanhamento do Funil',
     text: 'Cada lead monitorado do primeiro clique ate a venda fechada, ou recuperado se travar no meio do caminho.',
   },
   {
-    icon: Radar,
+    glyph: 'DATA',
     title: 'Rastreamento Real',
     text: 'Tracking completo de cada lead ate a venda. Voce sabe exatamente de onde vem cada cliente e quanto custou.',
   },
   {
-    icon: BarChart3,
+    glyph: 'BI',
     title: 'Painel de Acompanhamento',
     text: 'Visao clara de campanhas, leads, custo e vendas em tempo real. Dados reais, menos achismo.',
   },
@@ -82,6 +69,17 @@ const forWho = [
   'Cansado de investir sem entender o que esta acontecendo',
 ];
 
+function V5BrandMark() {
+  return (
+    <span
+      className="inline-flex h-10 min-w-10 items-center justify-center rounded-lg border border-brand-primary/45 bg-white/5 px-2 font-display text-xl uppercase leading-none text-brand-secondary"
+      aria-label="RN Digital Midia"
+    >
+      RN
+    </span>
+  );
+}
+
 export default function HomeV5() {
   return (
     <div className="v3-root min-h-screen selection:bg-brand-primary selection:text-black">
@@ -91,7 +89,7 @@ export default function HomeV5() {
       <nav className="fixed top-0 z-50 w-full border-b border-white/10 bg-dark-bg/92">
         <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6">
           <Link to="/v5" className="flex items-center gap-3">
-            <Logo />
+            <V5BrandMark />
             <div className="hidden text-xs uppercase tracking-[0.22em] text-white/60 md:block">
               Performance Lab
             </div>
@@ -119,7 +117,7 @@ export default function HomeV5() {
           <div className="mx-auto grid w-full max-w-7xl items-end gap-12 lg:grid-cols-[1.1fr_.9fr]">
             <div className="v3-enter">
               <div className="inline-flex items-center gap-2 rounded-full border border-brand-primary/30 bg-white/5 px-4 py-2 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-brand-secondary">
-                <Sparkles className="h-3.5 w-3.5" />
+                <span aria-hidden="true">●</span>
                 Trafego pago · CRM · Automacao
               </div>
 
@@ -144,7 +142,7 @@ export default function HomeV5() {
                   className="inline-flex items-center gap-2 rounded-full bg-brand-primary px-7 py-4 text-sm font-black uppercase tracking-[0.12em] text-black transition-all hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(250,95,42,0.36)] motion-reduce:transform-none motion-reduce:transition-none"
                 >
                   Quero mais leads qualificados
-                  <ArrowRight className="h-4 w-4" />
+                  <span aria-hidden="true">-&gt;</span>
                 </a>
                 <a
                   href="#como"
@@ -210,7 +208,7 @@ export default function HomeV5() {
                   <span className="text-brand-primary"> Os leads chegam. Mas nao viram venda.</span>
                 </h2>
               </div>
-              <Radar className="hidden h-20 w-20 text-brand-primary/60 lg:block" />
+              <div className="hidden h-20 w-20 items-center justify-center rounded-2xl border border-brand-primary/35 bg-brand-primary/10 font-display text-2xl text-brand-secondary lg:flex">01</div>
             </div>
 
             <p className="max-w-3xl text-white/75">
@@ -245,7 +243,9 @@ export default function HomeV5() {
             <div className="grid gap-5 md:grid-cols-2">
               {solutionItems.map((item) => (
                 <article key={item.title} className="rounded-3xl border border-white/10 bg-black/25 p-7">
-                  <item.icon className="h-8 w-8 text-brand-primary" />
+                  <div className="inline-flex items-center justify-center rounded-xl border border-brand-primary/30 bg-brand-primary/10 px-3 py-1 text-xs font-black uppercase tracking-[0.14em] text-brand-secondary">
+                    {item.glyph}
+                  </div>
                   <h3 className="mt-4 text-2xl font-semibold text-white">{item.title}</h3>
                   <p className="mt-3 leading-relaxed text-white/70">{item.text}</p>
                 </article>
@@ -261,7 +261,7 @@ export default function HomeV5() {
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-secondary">03 · Como funciona</p>
                 <h2 className="mt-3 font-display text-4xl uppercase text-white md:text-6xl">Do primeiro clique ao cliente fechado</h2>
               </div>
-              <Layers3 className="h-16 w-16 text-brand-primary/70" />
+              <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl border border-brand-primary/35 bg-brand-primary/10 font-display text-2xl text-brand-secondary">03</div>
             </div>
 
             <div className="grid gap-5 md:grid-cols-2">
@@ -269,7 +269,7 @@ export default function HomeV5() {
                 <article key={step.id} className="rounded-3xl border border-white/10 bg-white/[0.04] p-7">
                   <div className="flex items-center justify-between">
                     <span className="font-display text-5xl uppercase text-brand-primary/80">{step.id}</span>
-                    <Gauge className="h-5 w-5 text-brand-secondary" />
+                    <span className="text-xs font-black uppercase tracking-[0.15em] text-brand-secondary">GO</span>
                   </div>
                   <h3 className="mt-3 text-2xl font-semibold text-white">{step.title}</h3>
                   <p className="mt-3 text-white/70">{step.text}</p>
@@ -308,7 +308,7 @@ export default function HomeV5() {
                 className="mt-9 inline-flex items-center gap-2 rounded-full bg-brand-secondary px-8 py-4 text-sm font-black uppercase tracking-[0.12em] text-black transition-all hover:-translate-y-1 hover:bg-brand-primary motion-reduce:transform-none motion-reduce:transition-none"
               >
                 Pare de depender de tentativa e erro
-                <ArrowRight className="h-4 w-4" />
+                <span aria-hidden="true">-&gt;</span>
               </a>
             </div>
           </div>
@@ -318,7 +318,7 @@ export default function HomeV5() {
       <footer className="border-t border-white/10 bg-dark-bg/95 py-10">
         <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-7 px-6 text-center md:flex-row md:text-left">
           <Link to="/v5" className="flex items-center gap-3">
-            <Logo />
+            <V5BrandMark />
             <span className="text-xs uppercase tracking-[0.2em] text-white/60">RN Digital Midia V5</span>
           </Link>
 
@@ -329,6 +329,7 @@ export default function HomeV5() {
             <Link to="/" className="hover:text-brand-secondary transition-colors">Versao v2</Link>
             <Link to="/v3" className="hover:text-brand-secondary transition-colors">Versao v3</Link>
             <Link to="/v4" className="hover:text-brand-secondary transition-colors">Versao v4</Link>
+            <Link to="/v6" className="hover:text-brand-secondary transition-colors">Versao v6</Link>
             <Link to="/privacidade" className="hover:text-brand-secondary transition-colors">Privacidade</Link>
             <Link to="/termos" className="hover:text-brand-secondary transition-colors">Termos</Link>
           </div>
