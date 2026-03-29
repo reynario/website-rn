@@ -19,22 +19,22 @@ const processSteps = [
   {
     id: '01',
     title: 'Diagnostico de Funil',
-    text: 'Mapeamos origem, atendimento e fechamento para descobrir onde voce perde receita.',
+    text: 'Mapeamos de onde vem o lead, como e atendido e por que nao fecha. Primeiro voce precisa saber onde sangra.',
   },
   {
     id: '02',
     title: 'Arquitetura de Midia',
-    text: 'Estruturamos campanhas por intencao de compra com regras de escala e protecao de margem.',
+    text: 'Montamos campanhas por intencao de compra, com criterio de escala e teto de custo. Crescer investimento sem saber o retorno nao e escala, e aposta.',
   },
   {
     id: '03',
     title: 'CRM de Conversao',
-    text: 'Conectamos WhatsApp, qualificacao e follow-up para reduzir o tempo entre lead e proposta.',
+    text: 'Conectamos WhatsApp, qualificacao e follow-up para que o lead nao esfrie entre o primeiro contato e a proposta.',
   },
   {
     id: '04',
     title: 'Rotina de Otimizacao',
-    text: 'Ajustes semanais guiados por CAC, taxa de resposta e valor por oportunidade real.',
+    text: 'Toda semana: CAC, taxa de resposta, valor por oportunidade. O que nao move o numero sai.',
   },
 ];
 
@@ -42,22 +42,22 @@ const stackItems = [
   {
     icon: Target,
     title: 'Midia de Alta Intencao',
-    text: 'Meta, Google e criativos orientados por etapa de funil, nao por vaidade de clique.',
+    text: 'Meta e Google com criativos por etapa de funil. O objetivo e gerar oportunidade, nao clique.',
   },
   {
     icon: MessageSquareMore,
     title: 'Orquestracao Comercial',
-    text: 'SLA, templates e automacoes para o time responder rapido e converter melhor.',
+    text: 'SLA, templates e automacoes para o time responder rapido e fechar melhor. Sem depender de cada um fazer do seu jeito.',
   },
   {
     icon: CircleDollarSign,
     title: 'Painel de Receita',
-    text: 'Visao consolidada de investimento, oportunidades e vendas com leitura executiva.',
+    text: 'Investimento, oportunidades e vendas em um lugar so. Leitura rapida para quem decide.',
   },
   {
     icon: Workflow,
     title: 'Playbooks de Escala',
-    text: 'Regras claras para duplicar o que funciona e cortar o que drena verba.',
+    text: 'O que funciona vira regra. O que drena verba, para.',
   },
 ];
 
@@ -111,8 +111,8 @@ export default function HomeV3() {
               </h1>
 
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/70">
-                A RN opera como um time de performance plugado no seu negocio: midia, CRM e rotina comercial
-                para transformar leads em venda com controle real de CAC.
+                A RN entra na sua operacao como time de performance: cuida de midia, CRM e rotina comercial
+                para que leads virem venda. Com numero real de CAC, nao estimativa.
               </p>
 
               <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -193,9 +193,9 @@ export default function HomeV3() {
 
             <div className="grid gap-5 md:grid-cols-3">
               {[
-                'Leads chegam e somem sem resposta do comercial.',
-                'Voce nao consegue ligar investimento ao faturamento real.',
-                'A equipe ajusta campanha sem criterio unico de receita.',
+                'Leads chegam, o comercial nao responde, e ninguem sabe explicar por que.',
+                'Voce nao consegue ligar o que gasta em midia ao que entra de receita.',
+                'A equipe mexe na campanha sem criterio - cada um com o seu.',
               ].map((item, idx) => (
                 <article key={item} className="rounded-3xl border border-white/10 bg-white/5 p-7">
                   <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-xl bg-brand-primary/20 font-display text-xl text-brand-secondary">0{idx + 1}</div>
@@ -211,7 +211,7 @@ export default function HomeV3() {
             <div className="mb-12 max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-secondary">Metodo RN</p>
               <h2 className="mt-3 font-display text-4xl uppercase text-white md:text-6xl">Processo em 4 sprints de performance</h2>
-              <p className="mt-4 text-lg text-white/70">Cada etapa trava uma fuga de receita. Quando soma, a operacao fica escalavel.</p>
+              <p className="mt-4 text-lg text-white/70">4 sprints. Cada um tampa um buraco diferente. Quando todos rodam juntos, a operacao para de depender de improviso.</p>
             </div>
 
             <div className="grid gap-5 md:grid-cols-2">

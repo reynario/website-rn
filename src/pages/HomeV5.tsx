@@ -5,32 +5,32 @@ const solutionItems = [
   {
     glyph: 'ADS',
     title: 'Meta, Google, TikTok & LinkedIn Ads',
-    text: 'Campanhas ativas nas plataformas certas para o seu publico e com estrategia integrada.',
+    text: 'Anuncios nas plataformas que fazem sentido para o seu publico. Nao tem receita universal.',
   },
   {
     glyph: 'CRM',
     title: 'CRM Proprio + WhatsApp',
-    text: 'CRM integrado ao WhatsApp para centralizar conversas, organizar etapas e automatizar o atendimento.',
+    text: 'CRM conectado ao WhatsApp para que nenhuma conversa se perca e cada lead saiba em que etapa esta.',
   },
   {
     glyph: 'AUTO',
     title: 'Automacao de Follow-up',
-    text: 'Nenhum lead esfria. Follow-up semi-automatico, qualificacao inteligente e avisos de temperatura.',
+    text: 'Nenhum lead esfria esperando alguem lembrar de mandar mensagem. O processo roda mesmo sem o time olhando.',
   },
   {
     glyph: 'FUNIL',
     title: 'Acompanhamento do Funil',
-    text: 'Cada lead monitorado do primeiro clique ate a venda fechada, ou recuperado se travar no meio do caminho.',
+    text: 'Cada lead monitorado do primeiro clique ate a venda. Se travar no meio, a gente ve onde e mexe.',
   },
   {
     glyph: 'DATA',
     title: 'Rastreamento Real',
-    text: 'Tracking completo de cada lead ate a venda. Voce sabe exatamente de onde vem cada cliente e quanto custou.',
+    text: 'Voce sabe de onde veio cada cliente e quanto custou. Sem essa, qualquer decisao e aposta.',
   },
   {
     glyph: 'BI',
     title: 'Painel de Acompanhamento',
-    text: 'Visao clara de campanhas, leads, custo e vendas em tempo real. Dados reais, menos achismo.',
+    text: 'Campanhas, leads, custo e vendas num lugar so. Numeros reais para decisoes reais.',
   },
 ];
 
@@ -38,17 +38,17 @@ const processSteps = [
   {
     id: '01',
     title: 'Estruturacao',
-    text: 'Antes de subir qualquer anuncio, configuramos CRM, tracking, integracoes e funil. So depois ligamos a torneira.',
+    text: 'Antes de subir qualquer anuncio, configuramos CRM, tracking e funil. Torneira so abre quando a estrutura esta de pe.',
   },
   {
     id: '02',
     title: 'Geracao de Leads',
-    text: 'Ativamos campanhas nas plataformas certas para o seu publico, com segmentacao precisa e criativos testados.',
+    text: 'Ativamos campanhas nas plataformas certas, com segmentacao e criativos que ja foram testados.',
   },
   {
     id: '03',
     title: 'Qualificacao Automatica',
-    text: 'Os leads passam por filtros, mensagens inteligentes e sao organizados no CRM por etapa e temperatura.',
+    text: 'Os leads sao filtrados, recebem mensagens no momento certo e chegam organizados no CRM por etapa.',
   },
   {
     id: '04',
@@ -58,14 +58,14 @@ const processSteps = [
   {
     id: '05',
     title: 'Otimizacao Continua',
-    text: 'Decisoes baseadas em dados reais, nao em achismo. Ajustamos campanhas, funis e processos todo mes.',
+    text: 'Todo mes: olhamos os numeros, entendemos o que funcionou e ajustamos o que nao funcionou. Sem palpite.',
   },
 ];
 
 const forWho = [
-  'Ja investe ou quer investir em trafego',
+  'Ja investe ou quer comecar a investir em trafego pago',
   'Negocios que dependem de leads para vender',
-  'Quer previsibilidade de crescimento',
+  'Quer saber de onde vem cada cliente e quanto custou',
   'Cansado de investir sem entender o que esta acontecendo',
 ];
 
@@ -125,7 +125,7 @@ export default function HomeV5() {
                 Mais clientes
                 <span className="text-brand-secondary"> qualificados.</span>
                 <br />
-                Todos os dias
+                Todo dia
                 <span className="text-brand-primary">.</span>
               </h1>
 
@@ -213,15 +213,15 @@ export default function HomeV5() {
 
             <p className="max-w-3xl text-white/75">
               A maioria das empresas investe em trafego, recebe leads, e ai... nada. O pior: voce nao sabe de onde veio cada lead,
-              quanto custou cada venda, nem onde o funil esta travando.
+              quanto custou cada venda, nem onde o funil travou.
             </p>
 
             <div className="mt-8 grid gap-5 md:grid-cols-2">
               {[
-                'Lead sem rastreamento: voce nao sabe de onde veio cada lead nem qual campanha gerou venda real.',
-                'Custo por venda invisivel: investe todo mes sem saber quanto custa adquirir um cliente.',
-                'Funil travado: os leads chegam mas somem sem follow-up estruturado.',
-                'Decisoes no achismo: sem dados reais, as otimizacoes viram apostas.',
+                'Lead sem rastreamento: voce nao sabe qual campanha gerou venda real. So sabe que gastou.',
+                'Custo por venda invisivel: todo mes o dinheiro sai, mas o quanto custa adquirir um cliente continua sendo chute.',
+                'Funil travado: os leads chegam e somem. Sem follow-up, esfria sozinho.',
+                'Decisoes no achismo: sem numero real para guiar, otimizar vira aposta.',
               ].map((item, idx) => (
                 <article key={item} className="rounded-3xl border border-white/10 bg-white/5 p-7">
                   <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-xl bg-brand-primary/20 font-display text-xl text-brand-secondary">0{idx + 1}</div>
@@ -289,8 +289,8 @@ export default function HomeV5() {
                 <span className="text-brand-secondary">Aqui o foco e a venda.</span>
               </h2>
               <p className="mx-auto mt-5 max-w-2xl text-lg text-white/75">
-                Se o lead nao vira cliente, a gente ajusta o processo. Se o funil trava, a gente corrige.
-                Se a campanha nao performa, a gente otimiza.
+                Quando o lead nao converte, a gente olha por que. Pode ser o funil, pode ser o processo comercial,
+                pode ser a campanha. A gente mexe onde precisa mexer.
               </p>
 
               <div className="mx-auto mt-8 grid max-w-4xl gap-3 sm:grid-cols-2">
