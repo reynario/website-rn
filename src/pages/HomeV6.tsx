@@ -1,5 +1,6 @@
 ﻿import React from 'react';
 import { Link } from 'react-router-dom';
+import Logo from '../components/Logo';
 
 const painPoints = [
   {
@@ -74,13 +75,6 @@ const flow = [
   },
 ];
 
-const quickSignals = [
-  ['Taxa de contato', '71%'],
-  ['Tempo medio de resposta', '4m'],
-  ['Leads qualificados', '185'],
-  ['ROI projetado', '4.2x'],
-];
-
 export default function HomeV6() {
   return (
     <div className="min-h-screen bg-[#070a10] text-white selection:bg-brand-primary selection:text-black">
@@ -93,8 +87,8 @@ export default function HomeV6() {
         <header className="border-b border-white/10 bg-black/35 backdrop-blur">
           <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-5">
             <Link to="/v6" className="inline-flex items-center gap-3">
-              <span className="inline-flex h-10 min-w-10 items-center justify-center rounded-lg border border-brand-primary/45 bg-white/5 px-2 font-display text-xl text-brand-secondary">RN</span>
-              <span className="text-xs uppercase tracking-[0.2em] text-white/70">RN Digital Midia V6</span>
+              <Logo />
+              <span className="text-xs uppercase tracking-[0.2em] text-white/70">RN Digital Midia</span>
             </Link>
 
             <a
@@ -139,51 +133,16 @@ export default function HomeV6() {
                 </div>
               </div>
 
-              <aside className="rounded-3xl border border-brand-primary/20 bg-[linear-gradient(160deg,rgba(250,95,42,0.14),rgba(8,12,18,0.9)_35%,rgba(8,12,18,0.95)_100%)] p-7 md:p-8">
-                <p className="text-xs uppercase tracking-[0.16em] text-white/60">Score de crescimento</p>
-                <div className="mt-6 space-y-5">
-                  {[
-                    ['Leads no CRM', '210', '67%'],
-                    ['CAC medio', 'R$350', '78%'],
-                    ['Vendas do mes', '27', '55%'],
-                    ['Receita rastreada', 'R$50.600', '82%'],
-                  ].map(([label, value, bar]) => (
-                    <div key={label} className="rounded-2xl border border-white/12 bg-black/35 p-4">
-                      <div className="flex items-center justify-between text-xs uppercase tracking-[0.12em] text-white/65">
-                        <span>{label}</span>
-                        <span>{bar}</span>
-                      </div>
-                      <div className="mt-2 text-2xl font-bold text-white">{value}</div>
-                      <div className="mt-3 h-1.5 rounded-full bg-white/12">
-                        <div className="h-full rounded-full bg-gradient-to-r from-brand-primary to-brand-secondary" style={{ width: bar }} />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-6 rounded-2xl border border-white/12 bg-black/35 p-4">
-                  <p className="text-xs uppercase tracking-[0.14em] text-white/58">Leitura rapida do funil</p>
-                  <div className="mt-4 grid grid-cols-2 gap-3">
-                    {quickSignals.map(([label, value]) => (
-                      <div key={label} className="rounded-xl border border-white/10 bg-[#0a1018] p-3">
-                        <p className="text-[0.64rem] uppercase tracking-[0.12em] text-white/55">{label}</p>
-                        <p className="mt-1 text-xl font-black text-brand-secondary">{value}</p>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="mt-4 rounded-xl border border-white/10 bg-[#0a1018] p-3">
-                    <div className="flex items-center justify-between text-[0.65rem] uppercase tracking-[0.12em] text-white/58">
-                      <span>Meta do ciclo atual</span>
-                      <span>R$ 90.000</span>
-                    </div>
-                    <div className="mt-2 h-2 rounded-full bg-white/10">
-                      <div className="h-full w-[56%] rounded-full bg-gradient-to-r from-brand-primary via-amber-300 to-brand-secondary" />
-                    </div>
-                    <p className="mt-2 text-[0.68rem] uppercase tracking-[0.11em] text-white/50">56% da meta atingida</p>
-                  </div>
-                </div>
-
+              <aside className="rounded-3xl border border-brand-primary/20 bg-[linear-gradient(160deg,rgba(250,95,42,0.14),rgba(8,12,18,0.9)_35%,rgba(8,12,18,0.95)_100%)] p-4 md:p-6">
+                <img
+                  src="/funil-rn.png"
+                  alt="Funil de conversao RN Digital Midia"
+                  width={768}
+                  height={1366}
+                  decoding="async"
+                  fetchPriority="high"
+                  className="mx-auto w-full max-w-[430px] object-contain"
+                />
               </aside>
             </div>
           </section>
@@ -268,14 +227,15 @@ export default function HomeV6() {
 
         <footer className="border-t border-white/10 bg-black/35 py-10">
           <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-6 px-6 text-center md:flex-row md:text-left">
+            <Link to="/v6" className="flex items-center gap-3">
+              <Logo />
+              <span className="text-xs uppercase tracking-[0.2em] text-white/60">RN Digital Midia</span>
+            </Link>
+
             <p className="text-sm text-white/55">© 2026 RN Digital Midia. Todos os direitos reservados.</p>
             <div className="flex flex-wrap items-center justify-center gap-5 text-xs uppercase tracking-[0.12em] text-white/65">
-              <a href="/v1/" className="transition-colors hover:text-brand-secondary">v1</a>
-              <Link to="/" className="transition-colors hover:text-brand-secondary">v2</Link>
-              <Link to="/v3" className="transition-colors hover:text-brand-secondary">v3</Link>
-              <Link to="/v4" className="transition-colors hover:text-brand-secondary">v4</Link>
-              <Link to="/v5" className="transition-colors hover:text-brand-secondary">v5</Link>
-              <Link to="/v6" className="text-brand-secondary">v6</Link>
+              <Link to="/privacidade" className="transition-colors hover:text-brand-secondary">Privacidade</Link>
+              <Link to="/termos" className="transition-colors hover:text-brand-secondary">Termos</Link>
             </div>
           </div>
         </footer>

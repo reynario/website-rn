@@ -3,6 +3,7 @@ import './HomeV7.fonts.css';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
+import Logo from '../components/Logo';
 
 // ─── palette ──────────────────────────────────────────────────────────────────
 const C = {
@@ -131,13 +132,7 @@ export default function HomeV7() {
           <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4">
 
             <Link to="/v7" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
-              <span style={{
-                display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                width: '38px', height: '38px',
-                border: `1.5px solid ${C.bLime}`, borderRadius: '7px',
-                fontFamily: SYNE, fontWeight: 800, fontSize: '17px', color: C.lime,
-                background: 'rgba(201,255,0,0.06)',
-              }}>RN</span>
+              <Logo />
               <span style={{ fontFamily: MONO, fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', color: C.muted }}>
                 Digital Midia
               </span>
@@ -527,25 +522,19 @@ export default function HomeV7() {
         {/* ════════════════════════════════════════ FOOTER ════════════════════════════════════════ */}
         <footer style={{ borderTop: `1px solid ${C.border}`, background: 'rgba(4,8,16,0.92)', padding: '36px 24px' }}>
           <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-5 md:flex-row">
+            <Link to="/v7" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
+              <Logo />
+              <span style={{ fontFamily: MONO, fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', color: C.muted }}>
+                Digital Midia
+              </span>
+            </Link>
+
             <p style={{ fontFamily: MONO, fontSize: '10px', color: C.muted, letterSpacing: '0.08em' }}>
               © 2026 RN Digital Midia. Todos os direitos reservados.
             </p>
             <div style={{ display: 'flex', gap: '22px', fontFamily: MONO, fontSize: '9px', letterSpacing: '0.14em', textTransform: 'uppercase' }}>
-              {[
-                { href: '/v1/', label: 'v1', external: true, active: false },
-                { href: '/',    label: 'v2', external: false, active: false },
-                { href: '/v3',  label: 'v3', external: false, active: false },
-                { href: '/v4',  label: 'v4', external: false, active: false },
-                { href: '/v5',  label: 'v5', external: false, active: false },
-                { href: '/v6',  label: 'v6', external: false, active: false },
-                { href: '/v7',  label: 'v7', external: false, active: true },
-              ].map(({ href, label, external, active }) =>
-                external ? (
-                  <a key={label} href={href} style={{ color: active ? C.lime : C.muted, textDecoration: 'none', transition: 'color .2s' }}>{label}</a>
-                ) : (
-                  <Link key={label} to={href} style={{ color: active ? C.lime : C.muted, textDecoration: 'none', transition: 'color .2s' }}>{label}</Link>
-                )
-              )}
+              <Link to="/privacidade" style={{ color: C.muted, textDecoration: 'none', transition: 'color .2s' }}>Privacidade</Link>
+              <Link to="/termos" style={{ color: C.muted, textDecoration: 'none', transition: 'color .2s' }}>Termos</Link>
             </div>
           </div>
         </footer>

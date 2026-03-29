@@ -1,5 +1,6 @@
 ﻿import React from 'react';
 import { Link } from 'react-router-dom';
+import Logo from '../components/Logo';
 
 const solutionItems = [
   {
@@ -69,17 +70,6 @@ const forWho = [
   'Cansado de investir sem entender o que esta acontecendo',
 ];
 
-function V5BrandMark() {
-  return (
-    <span
-      className="inline-flex h-10 min-w-10 items-center justify-center rounded-lg border border-brand-primary/45 bg-white/5 px-2 font-display text-xl uppercase leading-none text-brand-secondary"
-      aria-label="RN Digital Midia"
-    >
-      RN
-    </span>
-  );
-}
-
 export default function HomeV5() {
   return (
     <div className="v3-root min-h-screen selection:bg-brand-primary selection:text-black">
@@ -89,9 +79,9 @@ export default function HomeV5() {
       <nav className="fixed top-0 z-50 w-full border-b border-white/10 bg-dark-bg/92">
         <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6">
           <Link to="/v5" className="flex items-center gap-3">
-            <V5BrandMark />
+            <Logo />
             <div className="hidden text-xs uppercase tracking-[0.22em] text-white/60 md:block">
-              Performance Lab
+              RN Digital Midia
             </div>
           </Link>
 
@@ -318,18 +308,13 @@ export default function HomeV5() {
       <footer className="border-t border-white/10 bg-dark-bg/95 py-10">
         <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-7 px-6 text-center md:flex-row md:text-left">
           <Link to="/v5" className="flex items-center gap-3">
-            <V5BrandMark />
-            <span className="text-xs uppercase tracking-[0.2em] text-white/60">RN Digital Midia V5</span>
+            <Logo />
+            <span className="text-xs uppercase tracking-[0.2em] text-white/60">RN Digital Midia</span>
           </Link>
 
           <p className="text-sm text-white/50">© 2026 RN Digital Midia. Todos os direitos reservados.</p>
 
           <div className="flex items-center gap-6 text-xs uppercase tracking-[0.12em] text-white/65">
-            <a href="/v1/" className="hover:text-brand-secondary transition-colors">Versao v1</a>
-            <Link to="/" className="hover:text-brand-secondary transition-colors">Versao v2</Link>
-            <Link to="/v3" className="hover:text-brand-secondary transition-colors">Versao v3</Link>
-            <Link to="/v4" className="hover:text-brand-secondary transition-colors">Versao v4</Link>
-            <Link to="/v6" className="hover:text-brand-secondary transition-colors">Versao v6</Link>
             <Link to="/privacidade" className="hover:text-brand-secondary transition-colors">Privacidade</Link>
             <Link to="/termos" className="hover:text-brand-secondary transition-colors">Termos</Link>
           </div>

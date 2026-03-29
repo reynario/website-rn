@@ -72,7 +72,7 @@ export default function HomeV3() {
           <Link to="/" className="flex items-center gap-3">
             <Logo />
             <div className="hidden text-xs uppercase tracking-[0.22em] text-white/60 md:block">
-              Performance Lab
+              RN Digital Midia
             </div>
           </Link>
 
@@ -99,7 +99,7 @@ export default function HomeV3() {
             <div className="v3-enter">
               <div className="inline-flex items-center gap-2 rounded-full border border-brand-primary/30 bg-white/5 px-4 py-2 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-brand-secondary">
                 <Sparkles className="h-3.5 w-3.5" />
-                V3 \ War Room de Performance
+                Trafego, CRM e automacao
               </div>
 
               <h1 className="mt-6 font-display text-5xl uppercase leading-[0.93] text-white md:text-7xl">
@@ -298,16 +298,12 @@ export default function HomeV3() {
         <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-7 px-6 text-center md:flex-row md:text-left">
           <Link to="/" className="flex items-center gap-3">
             <Logo />
-            <span className="text-xs uppercase tracking-[0.2em] text-white/60">RN Digital Midia V3</span>
+            <span className="text-xs uppercase tracking-[0.2em] text-white/60">RN Digital Midia</span>
           </Link>
 
           <p className="text-sm text-white/50">© 2026 RN Digital Midia. Todos os direitos reservados.</p>
 
           <div className="flex items-center gap-6 text-xs uppercase tracking-[0.12em] text-white/65">
-            <a href="/v1/" className="hover:text-brand-secondary transition-colors">Versao v1</a>
-            <Link to="/" className="hover:text-brand-secondary transition-colors">Versao v2</Link>
-            <Link to="/v4" className="hover:text-brand-secondary transition-colors">Versao v4</Link>
-            <Link to="/v5" className="hover:text-brand-secondary transition-colors">Versao v5</Link>
             <Link to="/privacidade" className="hover:text-brand-secondary transition-colors">Privacidade</Link>
             <Link to="/termos" className="hover:text-brand-secondary transition-colors">Termos</Link>
           </div>
