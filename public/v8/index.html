@@ -7,8 +7,6 @@
   <meta name="description" content="Tráfego pago, CRM e automações no mesmo processo. Você sabe de onde veio cada lead e quanto custou cada venda. Do primeiro clique ao fechamento.">
   <meta property="og:title" content="RN Digital Mídia | Do Lead ao Cliente">
   <meta property="og:description" content="A gente cuida do processo inteiro. Tráfego pago, CRM e automações para transformar leads em clientes.">
-  <link rel="icon" type="image/webp" href="/logo.webp">
-  <link rel="apple-touch-icon" href="/logo.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
@@ -169,16 +167,12 @@
       display: flex; align-items: center; gap: 0.6rem;
     }
     .nav-logo-mark {
-      width: 42px; height: 42px;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .nav-logo-mark img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
+      width: 38px; height: 38px;
+      background: var(--azul-principal);
       border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
     }
+    .nav-logo-mark svg { width: 22px; height: 22px; }
     .nav-logo-text {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 1.3rem; letter-spacing: 2px;
@@ -925,12 +919,6 @@
     }
 
     @media (max-width: 768px) {
-      .nav-inner { padding: 0 1rem; height: 76px; }
-      .nav-cta-wrap { gap: 0.6rem; }
-      .nav-cta-wrap .btn { padding: 0.75rem 1rem; font-size: 0.82rem; border-radius: 10px; }
-      .nav-logo { gap: 0.5rem; }
-      .nav-logo-text { font-size: 1.08rem; letter-spacing: 1.2px; }
-      .nav-logo-sub { font-size: 0.54rem; letter-spacing: 0.12em; }
       .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
       .hero-visual { display: none; }
       .hero-bg::before { width: 100%; clip-path: none; opacity: 0.5; }
@@ -959,9 +947,6 @@
     }
 
     @media (max-width: 480px) {
-      .nav-logo-sub { display: none; }
-      .nav-logo-text { font-size: 1rem; letter-spacing: 1px; }
-      .nav-cta-wrap .btn { padding: 0.68rem 0.86rem; font-size: 0.78rem; }
       .stats-bar-inner { grid-template-columns: repeat(2, 1fr); }
       .stat-item { border-left: none !important; border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 1.2rem; }
     }
@@ -974,7 +959,12 @@
     <div class="nav-inner">
       <a href="#" class="nav-logo">
         <div class="nav-logo-mark">
-          <img src="/logo.webp" alt="Logo RN Digital Mídia">
+          <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="8" height="8" rx="2" fill="white" fill-opacity="0.9"/>
+            <rect x="12" y="2" width="8" height="8" rx="2" fill="white" fill-opacity="0.5"/>
+            <rect x="2" y="12" width="8" height="8" rx="2" fill="white" fill-opacity="0.5"/>
+            <rect x="12" y="12" width="8" height="8" rx="2" fill="#F2B233"/>
+          </svg>
         </div>
         <div>
           <span class="nav-logo-text">RN Digital Mídia</span>
@@ -1248,7 +1238,7 @@
           SÓ <span class="azul">GESTÃO DE TRÁFEGO</span>
         </h2>
         <p class="section-sub">
-          Você contrata um processo. Anúncio, CRM, automação, acompanhamento. Tudo conectado para você enxergar o que está acontecendo — e tomar decisão com base em dado, não em chute.
+          Você contrata um processo. Anúncio, CRM, automação, acompanhamento — cada etapa conectada, cada resultado rastreado. Para de adivinhar o que está funcionando.
         </p>
       </div>
 
@@ -1258,14 +1248,14 @@
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
           </div>
           <div class="card-title">Omnichannel Ads</div>
-          <div class="card-text">Meta, Google, TikTok e LinkedIn Ads integrados em uma única estratégia. Cada canal no lugar certo do funil.</div>
+          <div class="card-text">Meta, Google, TikTok e LinkedIn rodando juntos — não em silos separados. Cada canal no momento certo da jornada do cliente.</div>
         </div>
         <div class="service-card fade-up delay-2">
           <div class="card-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
           </div>
           <div class="card-title">CRM Próprio</div>
-          <div class="card-text">Integrado ao WhatsApp para controle total dos leads. Histórico completo de cada conversa e etapa do funil.</div>
+          <div class="card-text">Ligado direto ao WhatsApp. Você vê onde cada lead parou, o que foi dito e qual é o próximo passo — sem planilha, sem memória.</div>
         </div>
         <div class="service-card fade-up delay-3">
           <div class="card-icon">
@@ -1279,7 +1269,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           </div>
           <div class="card-title">Tracking Real</div>
-          <div class="card-text">Rastreamento real de cada lead até a venda. Você sabe exatamente de onde veio cada cliente e quanto custou.</div>
+          <div class="card-text">Quando a venda fecha, você sabe de qual campanha esse cliente veio, quanto custou e qual criatvo converteu. Sem chute.</div>
         </div>
         <div class="service-card fade-up delay-2">
           <div class="card-icon">
@@ -1293,7 +1283,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
           <div class="card-title">Previsibilidade</div>
-          <div class="card-text">Decisões baseadas em dados reais. Pare de depender de tentativa e erro para crescer o seu negócio.</div>
+          <div class="card-text">Os dados mostram o que está funcionando, o que não está e o que ajustar. Você para de adivinhar e começa a crescer com consistência.</div>
         </div>
       </div>
     </div>
@@ -1327,22 +1317,22 @@
         <div class="step fade-up delay-2">
           <div class="step-num">02</div>
           <div class="step-title">Geração</div>
-          <div class="step-desc">Ativamos campanhas nas plataformas certas para o seu público e momento de compra.</div>
+          <div class="step-desc">Ativamos onde o seu cliente está. Criativos e segmentação testados antes de escalar o investimento.</div>
         </div>
         <div class="step step-active fade-up delay-3">
           <div class="step-num">03</div>
           <div class="step-title">Qualificação</div>
-          <div class="step-desc">Filtros e mensagens inteligentes no CRM selecionam os leads com real potencial.</div>
+          <div class="step-desc">O CRM pontua cada lead automaticamente. O comercial só fala com quem tem real chance de fechar.</div>
         </div>
         <div class="step fade-up delay-4">
           <div class="step-num">04</div>
           <div class="step-title">Acompanhamento</div>
-          <div class="step-desc">Monitoramento de cada lead até virar cliente. Nenhuma oportunidade cai no esquecimento.</div>
+          <div class="step-desc">Cada lead tem próximo passo definido. Se esfriou, a automação empurra. Se parou, a gente vê antes que suma.</div>
         </div>
         <div class="step fade-up delay-5">
           <div class="step-num">05</div>
           <div class="step-title">Otimização</div>
-          <div class="step-desc">Decisões baseadas em dados reais. Ajustes contínuos para melhorar o ROI todo mês.</div>
+          <div class="step-desc">Todo mês a gente olha o que trouxe resultado e o que não trouxe. Ajusta antes de o dinheiro ir embora.</div>
         </div>
       </div>
     </div>
@@ -1364,7 +1354,7 @@
           </div>
           <div>
             <div class="deliv-title">Gestão de tráfego completa</div>
-            <div class="deliv-text">Meta Ads, Google Ads, TikTok e LinkedIn integrados.</div>
+            <div class="deliv-text">Meta Ads, Google Ads, TikTok e LinkedIn — gerenciados juntos, com estratégia unificada.</div>
           </div>
         </div>
         <div class="deliv-card fade-up delay-2">
@@ -1373,7 +1363,7 @@
           </div>
           <div>
             <div class="deliv-title">CRM Próprio</div>
-            <div class="deliv-text">Controle total dos leads com histórico completo de atendimento.</div>
+            <div class="deliv-text">Histórico de cada lead, cada conversa, cada etapa. Tudo em um lugar, sem depender de anotação.</div>
           </div>
         </div>
         <div class="deliv-card fade-up delay-3">
@@ -1391,7 +1381,7 @@
           </div>
           <div>
             <div class="deliv-title">Automação de leads</div>
-            <div class="deliv-text">Follow up semi-automático e qualificação inteligente do lead.</div>
+            <div class="deliv-text">Lead que não respondeu recebe follow up. Lead qualificado vai direto pro comercial. Sem esforço manual.</div>
           </div>
         </div>
         <div class="deliv-card fade-up delay-2">
@@ -1400,7 +1390,7 @@
           </div>
           <div>
             <div class="deliv-title">Painel de acompanhamento</div>
-            <div class="deliv-text">Visual claro de campanhas, leads e ROI em tempo real.</div>
+            <div class="deliv-text">Quanto gastou, quantos leads vieram, quantos viraram cliente. Sem precisar pedir relatório pra ninguém.</div>
           </div>
         </div>
         <div class="deliv-card highlight fade-up delay-3">
@@ -1478,7 +1468,7 @@
       <div class="solution-intro fade-up" style="margin-bottom:3rem;">
         <div class="s-label" style="justify-content:center;">06 · Para quem</div>
         <h2 class="section-h2">QUEM<br><span class="azul">SE ENCAIXA AQUI</span></h2>
-        <p class="section-sub">Trabalhamos com empresas que já investem ou querem investir em crescimento com previsibilidade.</p>
+        <p class="section-sub">A conta é simples: se você precisa de lead para vender e quer saber de onde cada cliente veio, você está no lugar certo.</p>
       </div>
 
       <div class="who-grid">
@@ -1488,7 +1478,7 @@
           </div>
           <div>
             <div class="who-title">Empresas que já investem em tráfego</div>
-            <div class="who-text">Você já roda anúncios mas sente que o resultado poderia ser muito melhor. A estrutura está faltando.</div>
+            <div class="who-text">Você já roda anúncio, mas no final do mês não consegue dizer qual campanha trouxe qual cliente. Isso é estrutura faltando.</div>
           </div>
         </div>
         <div class="who-card fade-up delay-2">
@@ -1497,7 +1487,7 @@
           </div>
           <div>
             <div class="who-title">Negócios que dependem de leads para vender</div>
-            <div class="who-text">Seu modelo comercial precisa de um fluxo constante de oportunidades qualificadas chegando.</div>
+            <div class="who-text">Você vende por ligação, reunião ou proposta. O problema é que os leads chegam irregulares, mal qualificados, ou somem antes do comercial atender.</div>
           </div>
         </div>
         <div class="who-card fade-up delay-3">
@@ -1506,7 +1496,7 @@
           </div>
           <div>
             <div class="who-title">Empresas que querem previsibilidade</div>
-            <div class="who-text">Chega de meses bons e meses ruins sem entender o porquê. Você quer crescer com consistência.</div>
+            <div class="who-text">Cansou de não saber por que um mês foi bom e o outro desabou. Você quer crescer sem depender de sorte ou de um vendedor específico.</div>
           </div>
         </div>
         <div class="who-card fade-up delay-4">
@@ -1515,7 +1505,7 @@
           </div>
           <div>
             <div class="who-title">Quem está cansado de investir no escuro</div>
-            <div class="who-text">Você investe todo mês mas não sabe exatamente o que está funcionando. Isso precisa mudar.</div>
+            <div class="who-text">Você paga a conta do Meta todo mês mas não consegue ligar esse investimento a uma venda específica. É exatamente isso que a gente resolve.</div>
           </div>
         </div>
       </div>
@@ -1555,7 +1545,12 @@
     <div class="footer-inner">
       <a href="#" class="nav-logo">
         <div class="nav-logo-mark">
-          <img src="/logo.webp" alt="Logo RN Digital Mídia">
+          <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="8" height="8" rx="2" fill="white" fill-opacity="0.9"/>
+            <rect x="12" y="2" width="8" height="8" rx="2" fill="white" fill-opacity="0.5"/>
+            <rect x="2" y="12" width="8" height="8" rx="2" fill="white" fill-opacity="0.5"/>
+            <rect x="12" y="12" width="8" height="8" rx="2" fill="#F2B233"/>
+          </svg>
         </div>
         <div>
           <span class="nav-logo-text">RN Digital Mídia</span>
