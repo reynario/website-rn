@@ -8,11 +8,31 @@
   <meta property="og:title" content="RN Digital Mídia | Do Lead ao Cliente">
   <meta property="og:description" content="A gente cuida do processo inteiro. Tráfego pago, CRM e automações para transformar leads em clientes.">
   <link rel="icon" type="image/webp" href="../logo.webp">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Fonts carregadas de forma não-bloqueante -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap"></noscript>
+  <!-- Fontes auto-hospedadas — elimina dependência de fonts.googleapis.com -->
+  <link rel="preload" as="font" type="font/woff2" href="../fonts/bebas-neue-400.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../fonts/montserrat-700.woff2" crossorigin>
+  <style>
+    @font-face {
+      font-family: 'Bebas Neue';
+      src: url('../fonts/bebas-neue-400.woff2') format('woff2');
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('../fonts/montserrat-400.woff2') format('woff2');
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('../fonts/montserrat-600.woff2') format('woff2');
+      font-weight: 600; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('../fonts/montserrat-700.woff2') format('woff2');
+      font-weight: 700; font-style: normal; font-display: swap;
+    }
+  </style>
 
   <style>
     /* =====================
