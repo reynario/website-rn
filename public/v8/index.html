@@ -1,14 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RN Digital Mídia | Tráfego, CRM e Automação, Do Lead ao Cliente</title>
+  <title>RN Digital Mídia | Tráfego, CRM e Automação — Do Lead ao Cliente</title>
   <meta name="description" content="Tráfego pago, CRM e automações no mesmo processo. Você sabe de onde veio cada lead e quanto custou cada venda. Do primeiro clique ao fechamento.">
   <meta property="og:title" content="RN Digital Mídia | Do Lead ao Cliente">
-  <meta property="og:description" content="A gente cuida do processo inteiro, tráfego pago, CRM e automações para transformar leads em clientes.">
-  <link rel="icon" type="image/webp" href="/logo.webp">
-  <link rel="apple-touch-icon" href="/logo.webp">
+  <meta property="og:description" content="A gente cuida do processo inteiro. Tráfego pago, CRM e automações para transformar leads em clientes.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
@@ -135,6 +133,24 @@
     }
 
     /* =====================
+       HERO ANIMATIONS (CSS-only, no JS dependency)
+    ===================== */
+    @keyframes hero-rise {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes hero-scale {
+      from { opacity: 0; transform: scale(0.93); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    .hero-anim-1 { animation: hero-rise 0.7s ease forwards; animation-delay: 0.05s; opacity: 0; }
+    .hero-anim-2 { animation: hero-rise 0.7s ease forwards; animation-delay: 0.2s;  opacity: 0; }
+    .hero-anim-3 { animation: hero-rise 0.7s ease forwards; animation-delay: 0.38s; opacity: 0; }
+    .hero-anim-4 { animation: hero-rise 0.7s ease forwards; animation-delay: 0.52s; opacity: 0; }
+    .hero-anim-5 { animation: hero-rise 0.7s ease forwards; animation-delay: 0.64s; opacity: 0; }
+    .hero-anim-visual { animation: hero-scale 0.9s ease forwards; animation-delay: 0.3s; opacity: 0; }
+
+    /* =====================
        SCROLL ANIMATIONS
     ===================== */
     .fade-up { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
@@ -169,16 +185,12 @@
       display: flex; align-items: center; gap: 0.6rem;
     }
     .nav-logo-mark {
-      width: 42px; height: 42px;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .nav-logo-mark img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
+      width: 38px; height: 38px;
+      background: var(--azul-principal);
       border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
     }
+    .nav-logo-mark svg { width: 22px; height: 22px; }
     .nav-logo-text {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 1.3rem; letter-spacing: 2px;
@@ -300,7 +312,7 @@
     }
     .hero-proof-dot:first-child { margin-left: 0; }
 
-    /* Hero visual, abstract dashboard */
+    /* Hero visual — abstract dashboard */
     .hero-visual {
       position: relative;
     }
@@ -965,7 +977,12 @@
     <div class="nav-inner">
       <a href="#" class="nav-logo">
         <div class="nav-logo-mark">
-          <img src="/logo.webp" alt="Logo RN Digital Mídia">
+          <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="8" height="8" rx="2" fill="white" fill-opacity="0.9"/>
+            <rect x="12" y="2" width="8" height="8" rx="2" fill="white" fill-opacity="0.5"/>
+            <rect x="2" y="12" width="8" height="8" rx="2" fill="white" fill-opacity="0.5"/>
+            <rect x="12" y="12" width="8" height="8" rx="2" fill="#F2B233"/>
+          </svg>
         </div>
         <div>
           <span class="nav-logo-text">RN Digital Mídia</span>
@@ -1000,23 +1017,23 @@
 
     <div class="hero-inner">
       <div class="hero-content">
-        <div class="tag fade-up">
+        <div class="tag hero-anim-1">
           <span class="tag-dot"></span>
           Tráfego · CRM · Automação
         </div>
 
-        <h1 class="hero-h1 fade-up delay-1">
+        <h1 class="hero-h1 hero-anim-2">
           GERAR LEAD<br>
           É FÁCIL.<br>
           <span class="outline">VENDER</span><br>
           <span class="accent">É O DESAFIO.</span>
         </h1>
 
-        <p class="hero-sub fade-up delay-2">
-          A gente cuida do processo inteiro, do primeiro clique ao fechamento. Tráfego pago, CRM e automações integrados para você parar de perder cliente no meio do caminho.
+        <p class="hero-sub hero-anim-3">
+          A gente cuida do processo inteiro — do primeiro clique ao fechamento. Tráfego pago, CRM e automações integrados para você parar de perder cliente no meio do caminho.
         </p>
 
-        <div class="hero-actions fade-up delay-3">
+        <div class="hero-actions hero-anim-4">
           <a href="https://wa.me/5575981642126" target="_blank" rel="noopener noreferrer" class="btn btn-cta btn-lg">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.017.5 3.921 1.382 5.593L0 24l6.612-1.346A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.846 0-3.587-.492-5.09-1.352l-.364-.217-3.768.767.8-3.668-.237-.376A9.959 9.959 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
             Quero gerar mais vendas
@@ -1026,7 +1043,7 @@
           </a>
         </div>
 
-        <div class="hero-proof fade-up delay-4">
+        <div class="hero-proof hero-anim-5">
           <div class="hero-proof-dots">
             <div class="hero-proof-dot">A</div>
             <div class="hero-proof-dot">B</div>
@@ -1037,7 +1054,7 @@
         </div>
       </div>
 
-      <div class="hero-visual scale-in delay-2">
+      <div class="hero-visual hero-anim-visual">
         <div class="hero-visual-card">
           <div class="dash-header">
             <span class="dash-title">PAINEL DE PERFORMANCE</span>
@@ -1239,7 +1256,7 @@
           SÓ <span class="azul">GESTÃO DE TRÁFEGO</span>
         </h2>
         <p class="section-sub">
-          Você contrata um processo. Anúncio, CRM, automação, acompanhamento, cada etapa conectada, cada resultado rastreado. Para de adivinhar o que está funcionando.
+          Você contrata um processo. Anúncio, CRM, automação, acompanhamento — cada etapa conectada, cada resultado rastreado. Para de adivinhar o que está funcionando.
         </p>
       </div>
 
@@ -1249,14 +1266,14 @@
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
           </div>
           <div class="card-title">Omnichannel Ads</div>
-          <div class="card-text">Meta, Google, TikTok e LinkedIn rodando juntos, não em silos separados. Cada canal no momento certo da jornada do cliente.</div>
+          <div class="card-text">Meta, Google, TikTok e LinkedIn rodando juntos — não em silos separados. Cada canal no momento certo da jornada do cliente.</div>
         </div>
         <div class="service-card fade-up delay-2">
           <div class="card-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
           </div>
           <div class="card-title">CRM Próprio</div>
-          <div class="card-text">Ligado direto ao WhatsApp. Você vê onde cada lead parou, o que foi dito e qual é o próximo passo, sem planilha, sem memória.</div>
+          <div class="card-text">Ligado direto ao WhatsApp. Você vê onde cada lead parou, o que foi dito e qual é o próximo passo — sem planilha, sem memória.</div>
         </div>
         <div class="service-card fade-up delay-3">
           <div class="card-icon">
@@ -1355,7 +1372,7 @@
           </div>
           <div>
             <div class="deliv-title">Gestão de tráfego completa</div>
-            <div class="deliv-text">Meta Ads, Google Ads, TikTok e LinkedIn, gerenciados juntos, com estratégia unificada.</div>
+            <div class="deliv-text">Meta Ads, Google Ads, TikTok e LinkedIn — gerenciados juntos, com estratégia unificada.</div>
           </div>
         </div>
         <div class="deliv-card fade-up delay-2">
@@ -1526,7 +1543,7 @@
         DE <span class="amber">TENTATIVA E ERRO</span>
       </h2>
       <p class="cta-sub fade-up delay-2">
-        A primeira conversa é gratuita. A gente olha junto o que faz sentido para o seu negócio, sem compromisso.
+        A primeira conversa é gratuita. A gente olha junto o que faz sentido para o seu negócio — sem compromisso.
       </p>
       <div class="cta-actions fade-up delay-3">
         <a href="https://wa.me/5575981642126" target="_blank" rel="noopener noreferrer" class="btn btn-cta btn-lg">
@@ -1546,7 +1563,12 @@
     <div class="footer-inner">
       <a href="#" class="nav-logo">
         <div class="nav-logo-mark">
-          <img src="/logo.webp" alt="Logo RN Digital Mídia">
+          <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="8" height="8" rx="2" fill="white" fill-opacity="0.9"/>
+            <rect x="12" y="2" width="8" height="8" rx="2" fill="white" fill-opacity="0.5"/>
+            <rect x="2" y="12" width="8" height="8" rx="2" fill="white" fill-opacity="0.5"/>
+            <rect x="12" y="12" width="8" height="8" rx="2" fill="#F2B233"/>
+          </svg>
         </div>
         <div>
           <span class="nav-logo-text">RN Digital Mídia</span>
@@ -1589,10 +1611,7 @@
 
     animEls.forEach(el => observer.observe(el));
 
-    // Immediately make hero elements visible
-    document.querySelectorAll('.hero .fade-up, .hero .scale-in').forEach((el, i) => {
-      setTimeout(() => el.classList.add('visible'), i * 120);
-    });
+    // Stats bar — trigger on load since it's above the fold on some viewports
     document.querySelectorAll('.stats-bar .fade-in').forEach((el, i) => {
       setTimeout(() => el.classList.add('visible'), 400 + i * 100);
     });
@@ -1604,7 +1623,7 @@
         if (target) {
           e.preventDefault();
           const offset = 80;
-          const top = target.getBoundingClientRect().top + window.scrollY, offset;
+          const top = target.getBoundingClientRect().top + window.scrollY - offset;
           window.scrollTo({ top, behavior: 'smooth' });
           document.getElementById('nav-links').classList.remove('open');
         }
@@ -1614,6 +1633,3 @@
 
 </body>
 </html>
-
-
-
