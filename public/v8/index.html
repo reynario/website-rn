@@ -196,12 +196,20 @@
       font-size: 1.3rem; letter-spacing: 2px;
       color: var(--azul-escuro);
       line-height: 1;
+      white-space: nowrap;
     }
     .nav-logo-sub {
       font-size: 0.6rem; font-weight: 600;
       letter-spacing: 0.15em; text-transform: uppercase;
       color: var(--cinza-texto);
       display: block; margin-top: 1px;
+      white-space: nowrap;
+    }
+    @media (max-width: 768px) {
+      .nav-logo-sub { display: none; }
+      .nav-logo-text { font-size: 1.1rem; letter-spacing: 1.5px; }
+      .nav-logo-mark { width: 32px; height: 32px; }
+      .nav-logo { gap: 0.45rem; }
     }
     .nav-links {
       display: flex; gap: 2rem; list-style: none;
@@ -937,6 +945,7 @@
     }
 
     @media (max-width: 768px) {
+      .nav-inner { padding: 0 1.2rem; height: 64px; }
       .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
       .hero-visual { display: none; }
       .hero-bg::before { width: 100%; clip-path: none; opacity: 0.5; }
