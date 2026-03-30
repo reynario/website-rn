@@ -10,7 +10,9 @@
   <link rel="icon" type="image/webp" href="../logo.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
+  <!-- Fonts carregadas de forma não-bloqueante -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap"></noscript>
 
   <style>
     /* =====================
@@ -987,7 +989,7 @@
     <div class="nav-inner">
       <a href="#" class="nav-logo">
         <div class="nav-logo-mark">
-          <img src="../logo.webp" alt="RN Digital Mídia" style="width:38px;height:38px;object-fit:contain;border-radius:10px;">
+          <img src="../logo.webp" alt="RN Digital Mídia" width="38" height="38" style="width:38px;height:38px;object-fit:contain;border-radius:10px;">
         </div>
         <div>
           <span class="nav-logo-text">RN Digital Mídia</span>
@@ -1568,7 +1570,7 @@
     <div class="footer-inner">
       <a href="#" class="nav-logo">
         <div class="nav-logo-mark">
-          <img src="../logo.webp" alt="RN Digital Mídia" style="width:38px;height:38px;object-fit:contain;border-radius:10px;">
+          <img src="../logo.webp" alt="RN Digital Mídia" width="38" height="38" style="width:38px;height:38px;object-fit:contain;border-radius:10px;">
         </div>
         <div>
           <span class="nav-logo-text">RN Digital Mídia</span>
