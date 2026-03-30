@@ -23,6 +23,7 @@ export default function App() {
       <Suspense fallback={<RouteFallback />}>
         <Routes>
           <Route path="/" element={<HomeV2 />} />
+          <Route path="/v2" element={<HomeV2 />} />
           <Route path="/v3" element={<HomeV3 />} />
           <Route path="/v4" element={<HomeV4 />} />
           <Route path="/v5" element={<HomeV5 />} />
