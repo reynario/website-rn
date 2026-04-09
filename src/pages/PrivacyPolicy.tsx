@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'motion/react';
 import { ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const PrivacyPolicy = () => {
   useEffect(() => {
@@ -11,13 +10,13 @@ const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-dark-bg text-white selection:bg-brand-primary selection:text-white pt-32 pb-20">
       <div className="max-w-4xl mx-auto px-6">
-        <Link 
-          to="/" 
+        <a 
+          href="/" 
           className="inline-flex items-center gap-2 text-brand-secondary hover:text-white transition-colors mb-12 group"
         >
           <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
           Voltar para Home
-        </Link>
+        </a>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
